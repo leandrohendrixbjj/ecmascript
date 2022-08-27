@@ -1,0 +1,14 @@
+Ctrl + espaço -> abre cx de opções
+Ctrl + -> Aumenta a tela
+Ctrl - -> Diminui
+Shift + alt + f -> Identa o documento
+Alt + z -> Quebra de linha: quebra um texto grande na mesma linha
+Alt + setas(up ou down): move o codigo para cima ou baixo
+Seleciona + Ctrl + f2 -> Seleciona todas as palavras(selecionadas)
+Seleciona + Ctrl + d -> Seleciona as palavras(selecionadas) uma de cada vez
+Ctrl + shift + k -> Apaga a linha(s) selecionadas
+Ctrl + ; -> add atalho ou remove(windows)
+Ctrl + k + s => Atalho para os alias de teclado
+Ctrl + e -> Executa a query
+Ctrl + Shift + Alt + (↑ ou → ou ↓ ou ←) => Seleciona linhas no teclado
+! + tab => Criar html header

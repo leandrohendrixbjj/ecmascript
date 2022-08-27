@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+   <p id="sessao"></p>
+</body>
+</html>
+<script>
+    var horasProdutivas = { inicio: "08:00", fim:"16:30"};
+    var tempo = new Number();
+    tempo = 0;
+    
+
+function startCount() {
+    
+    var dt_abertura = new Date();
+        abertura = dt_abertura.getHours() + ':' + dt_abertura.getMinutes();
+    
+    if(abertura > horasProdutivas.inicio && abertura < horasProdutivas.fim){
+      var min = parseInt(tempo / 60);
+		
+      // Calcula os segundos restantes
+      var seg = tempo % 60;;
+
+      // Formata o número menor que dez, ex: 08, 07, ...
+      if(min < 10){
+        min = "0" + min;
+	    min = min.substr(0, 2);
+      }
+  
+      if(seg <= 9){
+        seg = "0" + seg;
+      }
+
+      // Cria a variável para formatar no estilo hora/cronômetro
+      sla = '00:' + min + ':' + seg;
+		
+      document.getElementById('sessao').innerHTML = sla;
+      setTimeout('startCount()',1000); 
+
+      // Define que a função será eecutada novamente em 1000ms = 1 segundo
+      //setTimeout('startCountdown()',1000);    
+      tempo++;
+    
+    }else{
+    	alert('Tempo de SLA:' + sla);
+    	return;
+    }  
+}
+
+startCount(); */ 
+</script>
