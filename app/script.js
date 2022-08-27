@@ -6,3 +6,4 @@ const handlerClick = () => {
 }
 
 button.addEventListener('click',handlerClick);
+zzx
