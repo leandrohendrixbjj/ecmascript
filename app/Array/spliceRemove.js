@@ -1,8 +1,9 @@
-const arr = [1,2,3,50];
+//Remove items from array
+const arr = ['leandro','soares','ribeiro'];
 
-let index_of_array = 3;
-let action = 1; //0->Add
+let fromItem = 1; //from
+let qtdToRemove = 2; //qtd items to remove from index
 
-arr.splice(index_of_array,action);
+arr.splice(fromItem,qtdToRemove);
 
 console.log(arr);
