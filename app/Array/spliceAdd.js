@@ -1,10 +1,13 @@
-//Add item in array from indexArray informed
-const arr = ['soares','Ribeiro'];
+// Splice => Emenda;
+// Allow to complet values un a Array
+// Return values at the same array
 
-let index_of_array = 0;
-let action = 0; //ADD
-let value = 'leandro';
+const letters = ['a','c','d'];
 
-arr.splice(index_of_array,action,value);
+const addAtPosition = 1; //IndexOfArray
+const action = 0; // Add = 0; Del = 1
+const value = 'b';
 
-console.log(arr);
+letters.splice(addAtPosition,action,value);
+
+console.log(letters);

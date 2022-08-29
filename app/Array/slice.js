@@ -1,12 +1,10 @@
-let nomes = ['Leandro', 'Soares', 'Ribeiro', 'Carlos', 'Almeida'];
+// Return a new array.
+// Don't chance current array.
+// Select items of array
+const names = ['leandro','soares','ribeiro','Ana'];
+const indexArr = 1;
+const numItemsToTake = 4;
 
-//1=>index of array
-let names = nomes.slice(1);
-
-console.log(names);
-
-//0=>index of array'
-//2->items should take
-let n = nomes.slice(0,2);
+const n = names.slice(indexArr,numItemsToTake);
 
 console.log(n);

@@ -1,9 +1,16 @@
-//Remove items from array
-const arr = ['leandro','soares','ribeiro'];
+// Splice => Emenda;
+// Allow to complet values un a Array
+// Return values at the same array
+const letters = ['b','c','a'];
 
-let fromItem = 1; //from
-let qtdToRemove = 2; //qtd items to remove from index
+let action = 1; // Add = 0; Del = 1
 
-arr.splice(fromItem,qtdToRemove);
+letters.splice(2,action); //Remove a from letters
 
-console.log(arr);
+const position = 0;
+const value = "a";
+action = 0;
+
+letters.splice(position,action,value);
+
+console.log(letters);
