@@ -1,8 +1,9 @@
 // Remove os itens duplicados
-const nomes = ['leandro', 'soares', 'ribeiro', 'leandro'];
+const arr = ['Leandro','Leandro','soares'];
 
-const names = nomes.filter(function(valor, index, nomes){
-     return nomes.indexOf(valor) == index;
+const nomes = arr.filter((value,index,arr) => {
+  return arr.indexOf(value) == index;
 });
 
-console.log(names);
+console.log(nomes);
+
