@@ -1,6 +1,6 @@
 //Procura por valor e retorna a posição
-const names = ['Leandro','Soares','Ana'];
+const arr = ['leandro','soares','ribeiro'];
 
-const name = names.findIndex(el => el === 'Ana');
+const index = arr.findIndex(nome => nome === 'ribeiro');
 
-console.log(name);
+console.log(index);
