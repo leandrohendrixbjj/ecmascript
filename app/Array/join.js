@@ -1,13 +1,17 @@
 // The join() method creates and returns a new string by concatenating all of 
 //the elements in an array  separated by commas or a specified separator string. 
 
-const elements = ['Fire', 'Air', 'Water'];
+const names = ['leandro','soares','ribeiro'];
 
-console.log(elements.join());
-// expected output: "Fire,Air,Water"
+let arr = names.join('');
+console.log(`${typeof arr}: ${arr}`); //leandrosoaresribeiro
 
-console.log(elements.join(''));
-// expected output: "FireAirWater"
+arr = names.join();
+console.log(`${typeof arr}: ${arr}`); //leandro,soares,ribeiro
 
-console.log(elements.join('-'));
-// expected output: "Fire-Air-Water"
+arr = names.join('-');
+console.log(`${typeof arr}: ${arr}`); //leandro-soares-ribeiro
+
+
+
+

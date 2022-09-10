@@ -1,11 +1,14 @@
-const str = ['Bison', 'Rio', 'Ken', 'Guilly', 'Ken'];
+// The join() method creates and returns a new string by concatenating all of 
+//the elements in an array  separated by commas or a specified separator string. 
 
-console.log(str.indexOf('Ken')); 
+const names = ['leandro','soares','ribeiro'];
 
-console.log(str.lastIndexOf('Ken'));
+let arr = names.join('');
+console.log(`${typeof arr}: ${arr}`); //leandrosoaresribeiro
 
-console.log(str.lastIndexOf('Bison'));
+arr = names.join();
+console.log(`${typeof arr}: ${arr}`); //leandro,soares,ribeiro
 
-console.log(str.indexOf('Sagat'));
-
+arr = names.join('-');
+console.log(`${typeof arr}: ${arr}`); //leandro-soares-ribeiro
 
