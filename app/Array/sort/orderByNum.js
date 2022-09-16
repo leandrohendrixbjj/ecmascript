@@ -1,4 +1,4 @@
-// Ordenar considerando apenas os números em um array de numeros e letras
+// Ordenar CONSIDERANDO APENAS OS NÚMEROS em um array de numeros e letras
 let values = [];
 let regexp = /[\D]/g;
 values.push('x' + 12);
