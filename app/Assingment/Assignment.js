@@ -1,6 +1,6 @@
-const user = {nome: 'Leandro', age: 37};
+const user = { nome: 'Leandro', age: 37 };
 
-const { nome, age } = user;
+
+const { nome } = user;
 
 console.log(nome);
-console.log(age);

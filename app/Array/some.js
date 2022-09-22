@@ -1,7 +1,10 @@
-const ages = [12,14,34,40];
+// Return true if a value is ar array
+const arr = ['leandro', 'soares', 'ribeiro'];
 
-function checkAges(age){
-    return age > 18;
+function values(names) {
+    return names == 'leandro';
 }
 
-console.log(ages.some(checkAges));
+console.log(
+    arr.some(values)
+);

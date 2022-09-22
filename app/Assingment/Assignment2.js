@@ -1,6 +1,6 @@
-const person = {nome: 'Leandro', idade: 33};
+const person = { nome: 'Leandro', idade: 33 };
 
-const {nome: userName, idade: userAge} = person;
+const { nome: aliasNome, idade: aliasIdade } = person;
 
-console.log(userName);
-console.log(userAge);
+console.log(`nome: ${aliasNome}`);
+console.log(`idade: ${aliasIdade}`);
