@@ -1,14 +1,15 @@
+console.clear();
+
 const axios = require('axios');
 
-class Api {
-    static async getAdress(cep) {
-        const response = await (axios.get(`https://viacep.com.br/ws/${cep}/json`));
-        return response;
-    }
+async function findCep(cep){
+    const res = await axios.get(`https://viacep.com.br/ws/${cep}/json`);
+    return res;
 }
 
-const data = Api.getAdress('03664020');
+async function print(){
+    let cep = await findCep('03664010');
+    console.log(cep.data);
+}
 
-data.then((res) => {
-    console.log(res.data);
-}).catch(err => console.log(err));
+print();
