@@ -1,20 +1,16 @@
 console.clear();
 
-class Person {
-    constructor(name, age) {
-        this._name = name;
-        Object.freeze(this);
+// Regular Date
+let date = new Date(2022, 09, 27);
+console.log(`Data: ${date}`);
 
-    }
+// As String
+date = new Date('2022/09/01');
+console.log(`Data: ${date}`);
 
-    get name() {
-        return this._name
-    }
-}
-
-let person = new Person('Leandro', 30);
-person.name = 'Carlos'
-console.log(person.name);
-
-
+// TimeZone
+const dateTz = new Date();
+console.log(
+    dateTz.toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' })
+);
 

@@ -1,10 +1,16 @@
-// lembrando que, nessa notação, o mês de janeiro é o 0:
+console.clear();
 
-const horas = new Date(2015,10,1);
+// Regular Date
+let date = new Date(2022, 09, 27);
+console.log(`Data: ${date}`);
 
-console.log('Horas: ', horas);
+// As String
+date = new Date('2022/09/01');
+console.log(`Data: ${date}`);
 
-// Passando como uma string
-const today = new Date('2015/10/1');
+// TimeZone
+const dateTz = new Date();
+console.log(
+    dateTz.toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' })
+);
 
-console.log('Today: ', today);
