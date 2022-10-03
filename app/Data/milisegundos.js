@@ -21,6 +21,3 @@ console.log(
 milisegundos = 3600000;
 console.log(
     `1 Hora = ${new Date(milisegundos)}`);
-
-
-

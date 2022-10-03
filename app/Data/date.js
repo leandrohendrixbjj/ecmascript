@@ -11,6 +11,6 @@ console.log(`Data: ${date}`);
 // TimeZone
 const dateTz = new Date();
 console.log(
-    dateTz.toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' })
+    dateTz.toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })
 );
 

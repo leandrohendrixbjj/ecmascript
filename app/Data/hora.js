@@ -1,5 +1,8 @@
+console.clear();
+
 const hoje = new Date();
 
-console.log('Hora UTC: ', hoje.getUTCHours());
+// UTC Universal time between 0 and 23
+console.log(`UTC Hours ${hoje.getUTCHours()}`);
 
-console.log('Hora Correta: ', hoje.getHours());
+console.log(`Right Hours ${hoje.getHours()}`);
