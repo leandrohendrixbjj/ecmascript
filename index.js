@@ -1,26 +1,18 @@
 console.clear();
+const arr = [];
 
-// 1 Segundos = 1000 Milissegundos
-let milisegundos = 1000;
+function fator(num) {
+    if (num == undefined) return 1;
+    if (num < 1) return 1;
+
+    arr.push(num)
+    return num * fator(num - 1);
+}
 
 console.log(
-    `1 Segundo = ${new Date(milisegundos)}`);
+    `Result: ${fator(5)}`
+);
 
-// 10 Segundos = 10000 Milissegundos
-milisegundos = 10000;
 console.log(
-    `10 Segundo = ${new Date(milisegundos)}`);
-
-// 1 Minuto = 60000 Milissegundos    
-milisegundos = 60000;
-console.log(
-    `1 Minuto = ${new Date(milisegundos)}`);
-
-
-// 1 Hora = 3600000 Milissegundos    
-milisegundos = 3600000;
-console.log(
-    `1 Hora = ${new Date(milisegundos)}`);
-
-
-
+    arr
+);

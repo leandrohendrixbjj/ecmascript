@@ -1,11 +1,18 @@
-const nums = [];
+console.clear();
+const arr = [];
 
-function fator(n){
-  if(n < 1){ return 1};
-  if(n > 1){nums.push(n)}
+function fator(num) {
+  if (num == undefined) return 1;
+  if (num < 1) return 1;
 
-  return n * fator(n -1);
+  arr.push(num)
+  return num * fator(num - 1);
 }
 
-console.log(fator(5));
-console.log(nums);
+console.log(
+  `Result: ${fator(5)}`
+);
+
+console.log(
+  arr
+);

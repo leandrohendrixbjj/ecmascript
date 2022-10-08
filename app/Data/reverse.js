@@ -1,7 +1,13 @@
+console.clear();
+
 let data = "23/04/2021";
-let dt = data.split('/').reverse().join('/')
-console.log(dt);
+
+console.log(
+    data.split('/').reverse().join('-')
+);
+
 
 let data_2 = "2021/04/23";
-let dt_2 = data_2.split('/').reverse().join('/')
-console.log(dt_2)
+console.log(
+    data_2.split('/').reverse().join('/')
+);
