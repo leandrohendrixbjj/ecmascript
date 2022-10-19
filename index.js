@@ -1,18 +1,36 @@
 console.clear();
-const arr = [];
 
-function fator(num) {
-    if (num == undefined) return 1;
-    if (num < 1) return 1;
-
-    arr.push(num)
-    return num * fator(num - 1);
+class Node {
+    constructor(val) {
+        this.val = val;
+        this.left = null;
+        this.right = null;
+    }
 }
 
-console.log(
-    `Result: ${fator(5)}`
-);
+function builtTree(root) {
+    const stack = [root];
 
-console.log(
-    arr
-);
+    while (stack.length > 0) {
+        let current = stack.pop();
+
+        //console.log(current.val);
+
+        if (current.left) { stack.push(current.left); }
+        if (current.right) { stack.push(current.right); }
+        console.log(stack.length);
+
+    }
+}
+
+const a = new Node('a');
+const b = new Node('b');
+const c = new Node('c');
+const d = new Node('d');
+
+a.left = c;
+a.right = b;
+c.left = d;
+
+
+builtTree(a);

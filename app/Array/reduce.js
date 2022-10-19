@@ -1,10 +1,15 @@
-const valorInicial = 0;
+console.clear();
+//Soma o numero de alunos
 
-const rockets = [
-    { country: "Russia", launches: 10 },
-    { country: "US", launches: 2 },
-    { country: "China", launches: 1 },    
+const valorInicial = 0;
+const alunos = [
+    { seq: 1, nome: 'leandro' },
+    { seq: 2, nome: 'soares' },
+    { seq: 3, nome: 'ribeiro' }
 ];
-  
-const tot = rockets.reduce( ( prevVal, rockets ) => prevVal + rockets.launches, valorInicial);
-console.log(tot);
+
+const sum = alunos.reduce((start, alunos) => start + alunos.seq, valorInicial);
+
+console.log(
+    sum
+);
