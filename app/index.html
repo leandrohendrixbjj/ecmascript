@@ -6,16 +6,31 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
+   <style>
+      div {
+         text-align: center;
+         margin-top: 15%;
+      }
+   </style>
 </head>
 
 <body>
-   <article id="electriccars" data-columns="3" data-index-number="12314"
-            data-parent="cars"> 
-   </article>
-   <script>
-      const element = document.getElementById('electriccars');
-      console.log('Columns', element.dataset.columns);
-      console.log('Index', element.dataset.indexNumber);
-      console.log('Cars', element.dataset.parent);
-   </script>
+   <div>
+      <img src="./img/got.jpeg" alt="" id="got" onmouseover="over(this)" onmouseout="out(this)">
+   </div>
+</body>
+
 </html>
+<script>
+   function over(element) {
+      element.style.borderStyle = "solid";
+      element.style.borderWidth = "50px";
+      element.style.borderColor = "blue";
+   }
+
+   function out(element) {
+      element.style.borderStyle = "solid";
+      element.style.borderWidth = "5px";
+      element.style.borderColor = "red";
+   }
+</script>
