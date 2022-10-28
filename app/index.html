@@ -6,31 +6,18 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
-   <style>
-      div {
-         text-align: center;
-         margin-top: 15%;
-      }
-   </style>
 </head>
 
 <body>
    <div>
-      <img src="./img/got.jpeg" alt="" id="got" onmouseover="over(this)" onmouseout="out(this)">
+      <label>Nome</label>
+      <input type="text" name="name" id="nome" onkeydown="main()">
    </div>
 </body>
 
 </html>
 <script>
-   function over(element) {
-      element.style.borderStyle = "solid";
-      element.style.borderWidth = "50px";
-      element.style.borderColor = "blue";
-   }
-
-   function out(element) {
-      element.style.borderStyle = "solid";
-      element.style.borderWidth = "5px";
-      element.style.borderColor = "red";
+   function main() {
+      alert("Welcome to field name");
    }
 </script>
