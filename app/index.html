@@ -1,3 +1,5 @@
+<!--Neste fetch aplicamos um return dentro do primeiro then. 
+    Veja a diferença con arquivo fetch.html-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,15 +11,16 @@
 </head>
 
 <body>
-   <div>
-      <label>Nome</label>
-      <input type="text" name="name" id="nome" onkeydown="main()">
-   </div>
+
 </body>
 
 </html>
 <script>
-   function main() {
-      alert("Welcome to field name");
-   }
+   const request = 'https://viacep.com.br/ws/03664010/json/';
+
+   window.fetch(request)
+      .then(response => response.json())
+      .then(fullAdress => console.log(fullAdress))
+      .catch(err => console.log(err));
+
 </script>

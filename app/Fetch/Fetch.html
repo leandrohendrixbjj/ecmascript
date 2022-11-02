@@ -1,17 +1,15 @@
+<!--Neste fetch aplicamos um return dentro do primeiro then. 
+    Veja a diferença con arquivo fetch.html-->
 <!DOCTYPE html>
 <html lang="en">
+
 </html>
 <script>
-     const url = 'https://viacep.com.br/ws/03664010/json/';
-     window
-       .fetch(url)
-       .then( (data) => {
-          data.json().then( (adress) => {
-             console.log('Adress', adress);
-          }).catch( (err) => {
-              console.log('Err', err);
-          })
-       }).catch( (err) => {
-          console.log('Error', err);
-       });
-</script>    
+   const request = 'https://viacep.com.br/ws/03664010/json/';
+
+   window.fetch(request)
+      .then(response => response.json())
+      .then(fullAdress => console.log(fullAdress))
+      .catch(err => console.log(err));
+
+</script>

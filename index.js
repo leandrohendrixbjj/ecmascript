@@ -1,9 +1,15 @@
-console.clear();
+const fetch = require('node-fetch');
 
-console.log("POnto_1");
+async function request() {
+    let url = "https://www.totvs.com.br";
 
-setTimeout(() => {
-    console.log("Ponto_2");
-}, 1000);
+    try {
+        return await fetch(url)
+    } catch (error) {
+        console.log(`Error: ${error}`);
+    }
+}
 
-console.log("POnto_3");
+request()
+    .then(response => console.log(response.status))
+    .catch(err => console.log(`Error:${error}`));
