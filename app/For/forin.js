@@ -12,4 +12,3 @@ const marcas = [{
 for (moto in marcas) {
     console.log(marcas[moto]);
 }
-
