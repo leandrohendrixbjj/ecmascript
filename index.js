@@ -1,9 +1,12 @@
-console.clear();
+console.log();
 
-const name = "leandro12";
-let regExp = /\D/g;
-let numbers = name.match(regExp).toString().replace(",", "")
+let str = "5";
+
+let num = parseInt(str);
+
+if (Number.isInteger(num))
+    console.log(typeof (num));
 
 console.log(
-    numbers.replace(/,/g, "")
+    `num:${num}`
 )

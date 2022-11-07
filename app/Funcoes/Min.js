@@ -1,9 +1,5 @@
-// Retorna valor mínimo
+console.clear();
 
-console.log(Math.min(0,1,2,3));
-
-
-
-
-
-
+console.log(
+    Math.min(20, 1, 2, 4, 5)
+);

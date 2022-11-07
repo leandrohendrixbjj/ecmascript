@@ -1,5 +1,12 @@
-let num = "4";
+console.log();
 
-let result = Number.parseInt(num);
+let str = "5";
 
-console.log(typeof(result));
+let num = parseInt(str);
+
+if (Number.isInteger(num))
+    console.log(typeof (num));
+
+console.log(
+    `num:${num}`
+)
