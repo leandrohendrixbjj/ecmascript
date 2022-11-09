@@ -1,6 +1,9 @@
 // Retorna Raiz Quadrada
+console.clear();
 
-console.log(Math.sqrt(16));
+console.log(
+    Math.sqrt(16)
+);
 
 
 
