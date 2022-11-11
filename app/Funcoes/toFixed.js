@@ -1,9 +1,9 @@
 // Aredonda para o números de casas informado
 
-function ganhoPorHora(salario, horasTrabalhadasNoMes) {
-    const salarioHora = (salario / horasTrabalhadasNoMes); 
-  
-    return salarioHora.toFixed(2);
-}
+console.clear();
 
-console.log(ganhoPorHora(3000,176)); 
+const value = 30.499809;
+
+console.log(
+    value.toFixed(3)
+)

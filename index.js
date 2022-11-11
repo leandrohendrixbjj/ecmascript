@@ -1,7 +1,12 @@
+// Desconsidera os números decimais
 console.clear();
 
-setTimeout(() => {
-    console.log(
-        "Execute once"
-    )
-}, 1000)
+console.log(
+    Math.trunc(4.5)
+);
+
+
+
+
+
+
