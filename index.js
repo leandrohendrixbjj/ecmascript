@@ -1,7 +1,7 @@
 console.clear();
 
-function binaryToInteger(str) {
-    return parseInt(str, 2);
-}
+const num = parseInt("12");
 
-console.log(binaryToInteger("101"));
+console.log(
+    `Num: ${num}, type:${typeof (num)}`
+);

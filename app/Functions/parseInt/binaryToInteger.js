@@ -1,5 +1,8 @@
-function binaryToInteger(str){
-    return parseInt(str, 2);
-}
+console.clear();
 
-console.log(binaryToInteger("101"));
+//Convert Binary to integer
+const binary = "101";
+
+console.log(
+    parseInt(binary, 2)
+);

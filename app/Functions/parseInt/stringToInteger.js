@@ -1,4 +1,7 @@
+console.clear();
 
-let num = "12";
-console.log(typeof(num));
-console.log(typeof(parseInt(num)));
+const num = parseInt("12");
+
+console.log(
+    `Num: ${num}, type:${typeof (num)}`
+);
