@@ -1,7 +1,6 @@
 console.clear();
 
-const num = parseInt("12");
+const greeting = (name = 'Leandro') => 'Hello ' + name;
 
-console.log(
-    `Num: ${num}, type:${typeof (num)}`
-);
+console.log(greeting());
+console.log(greeting('Soares'));
