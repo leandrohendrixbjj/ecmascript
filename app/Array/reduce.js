@@ -8,8 +8,6 @@ const alunos = [
     { seq: 3, nome: 'ribeiro' }
 ];
 
-const sum = alunos.reduce((start, alunos) => start + alunos.seq, valorInicial);
+const sum = alunos.reduce((accumulate, alunos) => accumulate + alunos.seq, valorInicial);
 
-console.log(
-    sum
-);
+console.log(sum);

@@ -21,5 +21,3 @@ function groupBy(key) {
 }
 
 console.log(groupBy('uf'));
-
-
