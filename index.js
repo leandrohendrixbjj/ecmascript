@@ -1,25 +1,18 @@
-// Agrupar valores de um array
+//Formata valor monetario
 console.clear();
-
-const users = [
-    { nome: "Karina", sexo: "F", uf: "BA" },
-    { nome: "Leandro", sexo: "M", uf: "SP" },
-    { nome: "Ellen", sexo: "F", uf: "SP" },
-];
-
-function groupBy(key) {
-    const data = users.reduce((accumulate, user) => {
-
-        if (!accumulate[user[key]])
-            accumulate[user[key]] = [];
-
-        accumulate[user[key]].push(user);
-
-        return accumulate;
-    }, {});
-    return data;
+function formatValue(value) {
+    return value.toLocaleString('pt-BR', { style: 'currency', currency: "BRL" })
 }
 
-console.log(groupBy('uf'));
+const salario = 9000;
+const horas = 160;
+const salarioHora = salario / 160;
+const salarioDia = salarioHora * 8;
+const salarioSemana = salarioDia * 5;
 
+const valorHora = formatValue(salarioHora);
+const valorDia = formatValue(salarioDia);
+const valorSemana = formatValue(salarioSemana);
 
+console.log(
+    `Valor hora: ${valorHora} Valor dia: ${valorDia} Valor semana: ${valorSemana}`);
