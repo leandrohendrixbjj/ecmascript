@@ -1,9 +1,12 @@
 console.clear();
 
-//  adds at an object
-const obj = {};
+let obj = {
+    length: 3,
+    0: 1,
+    1: 2,
+    2: 3
+};
 
-Array.prototype.unshift.call(obj, 1);
-Array.prototype.unshift.call(obj, 0);
-
-console.log(obj);
+console.log(
+    Array.prototype.map.call(obj, (value) => value * 2)
+);
