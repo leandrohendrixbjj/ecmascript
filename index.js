@@ -1,12 +1,10 @@
 console.clear();
 
-let obj = {
-    length: 3,
-    0: 1,
-    1: 2,
-    2: 3
-};
+["1", "2", "3"].map((element, index, arr) => {
+    return parseInt(element)
+});
 
-console.log(
-    Array.prototype.map.call(obj, (value) => value * 2)
-);
+let number = ["1", "2", "3"].map(Number);
+
+console.log(number);
+

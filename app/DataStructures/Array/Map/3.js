@@ -1,5 +1,5 @@
 console.clear();
-//Using map to reformat objects in an array
+//Using map to reformat objects in an array without keys to name and value
 const obj = [
     { key: 1, value: 10 },
     { key: 2, value: 20 },
