@@ -1,18 +1,19 @@
-console.clear();
 // GET => Obtem um valor desejado
-const people = [
-    { id: 3, name: "Ribeiro" },
-    { id: 1, name: "Leandro" },
-    { id: 2, name: "Soares" },
+const data = [
+    { id: 1, name: 'Leandro' },
+    { id: 2, name: 'Soares' },
+    { id: 3, name: 'Ribeiro' },
 ];
 
+const people = data.map(({ id, name }) => {
+    return ({ id: id, name: name.toLocaleLowerCase() })
+});
+
 const map = new Map();
-for (let person of people) {
-    let { id } = person;
-    map.set(id, { ...person })
+for (person of people) {
+    let { name } = person;
+    map.set(name, { ...person })
 }
 
-console.log(map.get(1));
-
-
-
+let nome = 'LEANDRO'
+console.log(map.get(nome.toLocaleLowerCase()));
