@@ -1,23 +1,9 @@
-console.clear();
-// Agrupando objetos por uma propriedade
-let pessoas = [
-    { nome: "leandro", uf: "SP" },
-    { nome: "Soares", uf: "RJ" },
-    { nome: "Ribeiro", uf: "SP" },
-];
+// Removendo itens duplicados num array
 
-function groupBy(pessoas, atributo) {
-    return pessoas.reduce((acc, pessoa) => {
-        let key = pessoa[atributo];
+const nums = [5, 0, 1, 1, 3, 2, 2];
 
-        if (!acc[key]) {
-            acc[key] = [];
-        }
-        acc[key].push(pessoa);
+const withoutDuplicity = nums.filter((element, index, arr) => {
+    return nums.indexOf(element) == index;
+});
 
-        return acc;
-    }, {})
-}
-
-let group = groupBy(pessoas, "uf");
-console.log(group);
+console.log(withoutDuplicity.sort());
