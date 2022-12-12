@@ -1,3 +1,6 @@
+//O método slice() retorna uma cópia de parte de um array 
+//O Array original não é modificado.
+
 //slice = > fatiar
 
 const arr = ['leandro', 'soares', 'ribeiro', 'karina'];
@@ -19,14 +22,3 @@ console.log(arr.slice(-2)) //[ 'ribeiro', 'karina' ]
 console.log(arr.slice(-10)) //[ 'leandro', 'soares', 'ribeiro', 'karina' ]
 
 console.log(arr.slice()) //[ 'leandro', 'soares', 'ribeiro', 'karina' ]
-
-
-
-
-
-
-
-
-
-
-
