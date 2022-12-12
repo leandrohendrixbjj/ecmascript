@@ -1,6 +1,5 @@
 //O método slice() retorna uma cópia de parte de um array 
 //O Array original não é modificado.
-
 //slice = > fatiar
 
 const arr = ['leandro', 'soares', 'ribeiro', 'karina'];
