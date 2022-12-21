@@ -1,11 +1,9 @@
 console.clear();
-// Os arguments dentro de uma função são um exemplo de 'objeto array-like'.
 
-function list() {
-    return Array.prototype.slice.call(arguments)
+// Splice => Emendar
 
-}
+const months = ['Jan', 'March', 'April', 'June'];
 
-const data = list(1, 2);
+months.splice(1, 20);
 
-console.log(data);
+console.log(months);
