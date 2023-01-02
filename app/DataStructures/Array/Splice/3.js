@@ -1,10 +1,10 @@
 console.clear();
 // splice => Emendar
 
-//Clear array from index information
+//if we use a deleteCount great that array length, it will remove all data from index
 
 const arr = ["angel", "clown", "mandarin", "surgeon"];
 
-arr.splice(-4);
+arr.splice(1, 200);
 
 console.log(arr);

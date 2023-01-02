@@ -10,7 +10,7 @@ console.log(arr.slice(0, 1)) //[ 'leandro']
 
 console.log(arr.slice(0, 2)) //[ 'leandro', 'soares' ]
 
-console.log(arr.slice(0, 20)) //NADA
+console.log(arr.slice(0, 20)) // Todos
 
 console.log(arr.slice(1, 4)) //[ 'soares', 'ribeiro', 'karina' ]
 
