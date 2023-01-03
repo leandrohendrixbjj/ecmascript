@@ -1,9 +1,11 @@
 console.clear();
+// Vefirica se todos os elementos do array passam pelo teste
+// Implementado na função
 
-const arr = [1, 3, 4];
+const arr = [];
+const isLow = (value) => value < 5;
 
-arr.splice(1, 0, 2)
 console.log(
-    arr
-);
+    arr.every(isLow));
+
 
