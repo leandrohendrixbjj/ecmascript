@@ -1,17 +1,16 @@
-const express = require('express');
-const app = express();
-// Middlewares de nível do aplicativo a uma instância do objeto app
-// usando as funções app.use() e app.METHOD()
+// Manipuladores de rota permitem a você definir várias rotas para um caminho.
+const app = require('express')();
 
-// Aqui está um exemplo de carregamento de um série de funções de middleware em um ponto de montagem, 
-// com um caminho de montagem. Ele ilustra uma sub-pilha de middleware que imprime informações 
-//de solicitação para qualquer tipo de solicitação HTTP no caminho /user/:id.
-app.use('/user/:id', function (req, res, next) {
-    console.log('Request URL:', req.originalUrl);
-    next();
-}, function (req, res, next) {
-    console.log('Request Type:', req.method);
-    next();
+app.get('/user/:id', function (req, res, next) {
+    if (req.params.id == 0) next('route'); //Go to Special print
+    else next(); //Go to Handle user
+}, (req, res, next) => {
+    res.send('Handle user');
+});
+
+// Special print
+app.get('/user/:id', function (req, res, next) {
+    res.send('special');
 });
 
 app.listen(3000, () => {
