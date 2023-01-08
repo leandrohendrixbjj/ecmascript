@@ -1,6 +1,6 @@
 console.clear();
 
-const Polygon = require('./app/DataStructures/Array/Constructor/Polygon.js');
+const Polygon = require('./Polygon.js');
 
 class Square extends Polygon {
     // super chama o construtor da classe pai e permite acesso ao seus atributos    
