@@ -1,19 +1,8 @@
 console.clear();
+let target = 0;
+let start = 3;
+let end = 4;
 
-const Polygon = require('./app/DataStructures/Array/Constructor/Polygon.js');
+let arr = [1, 2, 3, 4, 5].copyWithin(target, start, end)
 
-class Square extends Polygon {
-    // super chama o construtor da classe pai e permite acesso ao seus atributos    
-    constructor(height, width) {
-        super(height, width);
-        // Nas classes filhas, super() deve ser chamado antes de usar o this. 
-        // Se não ocorrer um erro de referência.
-        this.height;
-        this.width;
-    }
-}
-
-let square = new Square();
-console.log(`Altura: ${square.height}`);
-console.log(`Peso: ${square.width}`);
-
+console.log(arr);
