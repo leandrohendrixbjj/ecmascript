@@ -1,3 +1,14 @@
+start("22560961814");
+
+async function start(cpf) {
+    try {
+        let data = await isCpfRight(cpf);
+        console.log(data);
+    } catch (error) {
+        console.log(`Error: ${error}`);
+    }
+}
+
 function isCpfRight(cpf) {
     return new Promise((resolve, reject) => {
         let document = { sum: 0, rest: "", strCPF: String(cpf).replace(/[^\d]/g, '') }
@@ -68,14 +79,3 @@ function seekWrongType(cpf) {
 
     return true;
 }
-
-async function start(cpf) {
-    try {
-        let data = await isCpfRight(cpf);
-        console.log(data);
-    } catch (error) {
-        console.log(`Error: ${error}`);
-    }
-}
-
-start("22560961814")
