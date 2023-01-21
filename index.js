@@ -1,8 +1,9 @@
-console.clear();
-let target = 0;
-let start = 3;
-let end = 4;
+// slice, splice
 
-let arr = [1, 2, 3, 4, 5].copyWithin(target, start, end)
+const arr = [1, 3, 4, 5];
 
-console.log(arr);
+arr.splice(3, 1)
+
+console.log(
+    arr
+);
