@@ -1,6 +1,6 @@
 const person = {
-    "name":"leandro",
-    "age":33
+    "name": "leandro",
+    "age": 33
 }
 
 //Print keys of an Object
