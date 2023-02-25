@@ -1,16 +1,14 @@
 console.clear();
-// Chaves: {} => Limita o número de caracteres
 
-let regexp = /[gimba]{2,3}/ig;
+// Lista: [] => Valida os caracteres q estão na lista.Tudo dentro da lista é um caracter
+let regexp = new RegExp(/^[ordnael.?]/);
 
-let text = 'g';
+let text = 'leandro';
 console.log(`${text} : ${regexp.test(text)}`);
 
-text = 'gim';
+text = 'leandro.';
 console.log(`${text} : ${regexp.test(text)}`);
 
-text = 'gimb';
+text = 'leandro?';
 console.log(`${text} : ${regexp.test(text)}`);
-
-
 
