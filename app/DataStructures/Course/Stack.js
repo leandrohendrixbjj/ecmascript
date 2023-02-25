@@ -22,12 +22,26 @@ const Stack = function () {
       return delete this.object[keys[0]]
    }
 
-   this.peek = () => {
-      console.log(Object.keys(this.object).length);
+   this.size = () => {
+      console.log(`Size: ${Object.keys(this.object).length}`);
    }
 
-   this.show = () => {
+   this.all = () => {
       console.log(this.object);
+   }
+
+   this.first = () => {
+      let key = Object.keys(this.object)
+      console.log(
+         `First: ${this.object[key[0]]} `
+      );
+   }
+
+   this.last = () => {
+      let size = Object.keys(this.object).length;
+      console.log(
+         `Last: ${this.object[size]} `
+      );
    }
 }
 
@@ -37,5 +51,8 @@ stack.add(2)
 stack.add(3)
 stack.delBegin()
 stack.delEnd()
-stack.show()
-stack.peek()
+stack.size()
+stack.add(5)
+stack.first()
+stack.last()
+stack.all()
