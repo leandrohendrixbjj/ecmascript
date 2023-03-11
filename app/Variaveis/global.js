@@ -1,14 +1,9 @@
-oopsGlobal = 12; //it will be global with var and without it.
+console.clear();
+oopsGlobal = 12;
 
-function a(){
-   var oopsGlobal; 
-    oopsGlobal -= 1;
-}
+lessOne = () => { oopsGlobal--; 1 }
+lessTwo = () => { oopsGlobal -= 2; }
 
-function b(){
-    oopsGlobal -=1;
-}
-
-a();
-b();
+lessOne();
+lessTwo();
 console.log(oopsGlobal);
