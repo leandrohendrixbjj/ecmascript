@@ -6,4 +6,4 @@ let end = -1; //Se end for negativo, ele é tratado como length+end.
 
 let arr = [1, 2, 3, 40, 50].copyWithin(target, start, end)
 
-console.log(arr); //[ 40, 2, 3, 40, 50 ]
+console.log(arr);
