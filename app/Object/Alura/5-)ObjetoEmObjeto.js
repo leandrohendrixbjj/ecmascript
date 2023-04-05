@@ -5,11 +5,9 @@ const customer = {
     age: 20
 }
 
-const addres = {
+customer.adress = {
     street: 'Rua vince',
     zipcode: "030493"
 }
-
-Object.assign(customer, { addres });
 
 console.log(customer);
