@@ -1,31 +1,10 @@
-function wait500() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve('Wait500');
-    },500);
-  });
-}
+console.clear();
 
-function wait200() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve('Wait200');
-    },200);
-  });
-}
+//O then de Promise.all só será invocado quando todas as promisses estiverem concluídas
+const store = Promise.resolve(201);
+const update = Promise.reject("Id not avail");
+const remove = Promise.resolve(204)
 
-function jaRealizada(){
-  return new Promise((resolve,reject) => {
-    resolve(true);
-  });
-}
-
-//Retorna um array com as promises, respeitando a ordem de chamada
-//O then de Promise.all só será invocado quando todas as promisses estiverem concluídas'
-Promise.all([
-   wait500(),
-   wait200(),
-   jaRealizada()
-]).then( (ArrPromises) => {
-   console.log(ArrPromises);
-});
+Promise.all([store, update, remove])
+    .then(res => console.log(res))
+    .catch(error => console.log(error));
