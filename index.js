@@ -1,14 +1,20 @@
 console.clear();
 
-// Retorna true se achou o valor no array
+// Race, All e setlled
 
-let searchFor = 10;
-let fromIndex = 1; // Posição no array. Por padrão, 0.
+const p1 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 1000, 'p1')
+});
 
-console.log(
-    [10, 20, 30].includes(10, fromIndex)); // false
+const p2 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 500, 'p2')
+});
 
+const p3 = new Promise((resolve, reject) => {
+    setTimeout(reject, 100, 'p3')
+});
 
-fromIndex = 0;
-console.log(
-    [10, 20, 30].includes(10, fromIndex)); // false
+Promise.race([p1, p2, p3])
+    .then(res => console.log(res))
+    .then(error => error);
+
