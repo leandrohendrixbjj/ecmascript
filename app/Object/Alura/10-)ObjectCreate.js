@@ -2,9 +2,11 @@ console.clear();
 
 //Neste exemplo criamos o objeto B sem que seja uma referência de A.
 
-const a = { name: "leandro" }
-const b = Object.create(a);
+const a = { name: "Amanda" }
+const b = Object.create(a)
 b.name = a.name
 
-b.name = 'soares'
-console.log(a);
+b.name = 'Bruna'
+
+console.log(`A:${a}`);
+console.log(`B:${b}`);
