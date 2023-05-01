@@ -8,10 +8,3 @@ function Person() {
 const newPerson = new Person("Soares", 35);
 
 console.log(newPerson);
-
-
-
-
-
-
-
