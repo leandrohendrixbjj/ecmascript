@@ -1,13 +1,14 @@
 console.clear();
 
-//Invoca uma função com um dado valor this e argumentos passados individualmente.
-//A principal diferença é que call() aceita uma lista de argumentos,
-//enquanto apply() aceita um único array de argumentos.
-
-function print(name, age) {
-    return arguments;
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
 }
 
-let person = print.call(this, 'leandro', 30);
+function Leandro(name, age) {
+    Person.call(this, name, age);
+    this.adress = 'Rua A';
+}
 
-console.log(person);
+const leandro = new Leandro('leandro', 30);
+console.log();

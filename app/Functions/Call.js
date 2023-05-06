@@ -4,10 +4,10 @@ console.clear();
 //A principal diferença é que call() aceita uma lista de argumentos,
 //enquanto apply() aceita um único array de argumentos.
 
-function print(name, age) {
+function show() {
     return arguments;
 }
 
-let person = print.call(this, 'leandro', 30);
+let data = show.call(this, { name: 'leandro' }, 30, ['Honda', 'Suzuki']);
 
-console.log(person);
+console.log(data);

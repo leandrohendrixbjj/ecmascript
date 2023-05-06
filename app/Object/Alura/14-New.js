@@ -1,8 +1,8 @@
 console.clear();
 
-function Person() {
-    this.name = 'leandro';
-    this.age = 30;
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
 }
 
 const newPerson = new Person("Soares", 35);
