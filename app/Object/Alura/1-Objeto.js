@@ -4,13 +4,20 @@ console.clear();
 
 const person = {
     name: "leandro",
+    Name: 'Soares',
     age: 30,
+    salary: 3000,
+    1: 'Position',
+    adress: {
+        city: "São Paulo",
+        street: "Rua X",
+        number: "69"
+    },
     motors: ['Biz', 'Himalayan'],
     people: [
         { name: "Wagner" },
         { name: "Magno" },
     ],
-    salary: 3000,
     makePayment: function (value) {
         if (this.salary >= value) {
             this.salary -= value;

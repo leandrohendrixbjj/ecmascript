@@ -1,18 +1,18 @@
 console.clear();
 
-const pessoa = {
+const person = {
     name: "leandro",
     age: 20,
-    dependentes: [{
-        tipo: "F",
-        nome: "Carla"
-    }]
+    children: [
+        { name: "Sabrina" },
+        { name: "Sophia" },
+    ]
 }
 
-pessoa.dependentes.push({ tipo: "M", nome: 'Pedro' })
-pessoa.dependentes.push({ tipo: "F", nome: 'Sandra' })
+person.children.push({ name: "Carla" })
 
-console.log(
-    pessoa.dependentes.filter(item => item.tipo == "F")
-);
+const daughter = person.children.filter(child => child.name == 'Sophia')
+
+console.log(daughter);
+console.log(`Typeof ${typeof daughter}`);
 

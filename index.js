@@ -1,14 +1,17 @@
 console.clear();
-const moment = require('moment');
 
-const dtLast = '2023-05-12 18:00:10';
-const dtPenult = '2023-05-12 18:00:00';
+const person = {
+    name: 'leadnro',
+    adress: {
+        street: "Rua A",
+        city: "SP",
+        zipCode: "036"
+    }
+}
 
-const diff = moment(dtLast, "YYYY/MM/DD HH:mm:ss").diff(dtPenult, "YYYY/MM/DD HH:mm:ss");
-const duration = moment.duration(diff);
+const letter = {
+    to: person.name,
+    ...person.adress
+}
 
-const timeDiff = Math.floor(duration.asHours()) + moment.utc(diff).format(":mm:ss");
-
-console.log("timeDiff", timeDiff);
-
-
+console.log(letter);
