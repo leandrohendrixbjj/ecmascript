@@ -1,7 +1,7 @@
 console.clear();
 
 // E possível passar dados para uma função, através de um arr
-// Você pode usar arguments para passar todos os argumentos para o objeto da chamada. 
+// Você pode usar "arguments" para passar todos os argumentos para o objeto da chamada. 
 // O objeto chamado fica então responsável por manipular os argumentos.
 
 function count() {

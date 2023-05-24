@@ -1,8 +1,12 @@
 console.clear();
 
-const customer = '{"name":"Soares", "phones":["123","456"]}';
+const map = new WeakMap();
 
-const customerJson = JSON.parse(customer);
+let k1 = { name: "a" }
 
-console.log(customerJson);
-console.log(typeof customerJson);
+k1 = null
+map.set(k1, 'leandro')
+
+console.log(map.get(k1));
+
+
