@@ -1,5 +1,5 @@
 console.clear();
-
+// Retorna o tipo de variabel
 const typeCheck = (type) => {
     const typeString = Reflect.apply(Object.prototype.toString, type, [])
     return typeString.slice(
