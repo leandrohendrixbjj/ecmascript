@@ -1,5 +1,4 @@
 console.clear();
-// Procura registros dentro de um json
 const customers = require('./helper.json');
 
 function seek(list, target, value) {
