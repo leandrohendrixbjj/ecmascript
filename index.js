@@ -1,11 +1,18 @@
 console.clear();
-// Procura registros dentro de um json
-const customers = require('./helper.json');
 
-function seek(list, target, value) {
-    return list.find((item) => item[target].includes(value))
+const data = require('./helper.json')
+
+function seek(list, field, value) {
+    const result = list.find((item) => item[field].includes(value))
+
+    if (result)
+        return result
 }
 
-const data = seek(customers, "nome", "Olva");
+try {
+    const person = seek(data, 'elefone', '4733865848')
+} catch (error) {
+    console.log(error);
+}
 
-console.log(data);
+console.log(person);
