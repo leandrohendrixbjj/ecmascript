@@ -1,6 +1,7 @@
 console.clear();
+
 // Consulta os apartamentos que não possui complementos
-const customers = require('./helper.json');
+const customers = require('./20-Cliente.json');
 
 function seek(customers) {
     return customers.filter(customer => {
