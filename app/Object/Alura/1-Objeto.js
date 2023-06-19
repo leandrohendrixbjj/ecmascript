@@ -33,7 +33,5 @@ const person = {
     },
 }
 
-Object.defineProperties(person, {
-    "showSalary": { get: function () { console.log(this.salary) } }
-});
+
 
