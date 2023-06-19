@@ -1,8 +1,19 @@
 console.clear();
 
-// Undefined => As variáveis que não possuem valor o programador deve determina-la como null.
-// Em uma operação matemática null será considerado como 0.
+class Person {
+    constructor(name) {
+        this.id = Symbol(),
+            this.name = name
+    }
+}
 
-let age = null;
+const persons = [
+    new Person('leandro'), new Person('soares'), new Person('ribeiro')
+];
 
-console.log(age, age + 3, `Minha iadade é ${age}`);
+const seek = persons[2];
+
+const result = persons.find(item => item.id == seek.id);
+
+console.log(result);
+
