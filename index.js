@@ -1,8 +1,1 @@
-console.clear();
-
-const obj = { id: 1, name: "leandro" }
-
-const idIsAvail = 'id' in obj //Valida um atributo dentro do array
-
-if (idIsAvail)
-    console.log(obj.name)
+// freeze https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze
