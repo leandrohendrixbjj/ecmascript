@@ -1,15 +1,10 @@
-// 1-) Principal diferença entre elas é a sintaxe
-// 2-) Arrows precisam está associadas a uma variável
+console.clear()
 
-console.clear();
-
-const sumArrow = (a, b) => a + b
-console.log("Arrow", sumArrow(1, 2));
-
-function sum(a, b) {
-    return a + b
+let name = 'soares';
+const person = () => {
+    let name = 'aaa'
 }
-console.log("Function", sum(1, 2));
 
 
-
+person(name)
+console.log(name);
