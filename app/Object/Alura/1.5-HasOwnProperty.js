@@ -4,8 +4,8 @@ const person = {
     empresa: 'movida'
 }
 
-function takeAttribute(name){
-    if(person.hasOwnProperty(name)){
+function takeAttribute(name) {
+    if (person.hasOwnProperty(name)) {
         return person[name];
     }
     return 'not found';
