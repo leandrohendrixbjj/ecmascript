@@ -2,7 +2,7 @@
 // foi invocado.
 
 console.clear();
-
+const data = require('./app/Workers/worker.js')
 function Person() {
     this.age = 0
 
