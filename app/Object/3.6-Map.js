@@ -6,8 +6,7 @@ const people = [
     { id: 2, name: 'soares', idade: 40 },
 ].map((element, index, arr) => {
 
-    element = { ...element, age: element['idade'] } //Add age at End
-    //element = { age: element['idade'], ...element } Add age at Begin
+    element = { age: element['idade'], ...element } //Add age at begin
     delete element['idade']
     return element
 });

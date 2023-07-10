@@ -1,15 +1,14 @@
-// 1-) Arrow: quando usamos new ela sempre vai considerar o this do objeto que 
-// foi invocado.
-
 console.clear();
-const data = require('./app/Workers/worker.js')
-function Person() {
-    this.age = 0
+// Add um novo atributo no objeto e remove o anteior
 
-    setInterval(() => {
-        this.age = this.age + 1
-        console.log('Qual é a idade', this.age)
-    }, 1000)
-}
-const p = new Person()
+const people = [
+    { id: 1, name: 'leandro', idade: 30 },
+    { id: 2, name: 'soares', idade: 40 },
+].map((element, index, arr) => {
 
+    element = { age: element['idade'], ...element } //Add age at begin
+    delete element['idade']
+    return element
+});
+
+console.log(people);
