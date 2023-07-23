@@ -1,14 +1,20 @@
-console.clear();
-// Add um novo atributo no objeto e remove o anteior
+console.clear()
+import express from 'express'
+import url from 'url'
+import path from 'path'
 
-const people = [
-    { id: 1, name: 'leandro', idade: 30 },
-    { id: 2, name: 'soares', idade: 40 },
-].map((element, index, arr) => {
+const app = express()
+const port = process.env.PORT || 3000
 
-    element = { age: element['idade'], ...element } //Add age at begin
-    delete element['idade']
-    return element
-});
+//Obtém o caminho do diretório atual do arquivo
+const actualPath = url.fileURLToPath(import.meta.url)
 
-console.log(people);
+//Obtém o caminho do diretório public
+const publicPath = path.join(actualPath, '../', "public/src")
+
+
+app.use(express.static(publicPath))
+
+app.listen(port, () => {
+    console.log("Server is running at 3000")
+})
