@@ -2,7 +2,6 @@
   "name": "nodestudy",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,7 +17,8 @@
     "marko": "4.13.4-1",
     "moment": "^2.29.4",
     "node-fetch": "^2.6.1",
-    "sqlite3": "5.0.2"
+    "sqlite3": "5.0.2",
+    "socket.io": "^4.7.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.14"
