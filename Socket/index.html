@@ -86,6 +86,12 @@
             messages.appendChild(item);
             window.scrollTo(0, document.body.scrollHeight);
         });
+
+        socket.on('Cotacao', function (valor) {
+            var item = document.createElement('li');
+            item.textContent = valor;
+            messages.appendChild(item);
+        })
     </script>
 </body>
 
