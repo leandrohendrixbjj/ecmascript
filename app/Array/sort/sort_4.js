@@ -1,23 +1,24 @@
 //Ordena os grupos de valoes de um objeto
-const arr = [
-   {x:1,y:2},
-   {x:3,y:4},
-   {x:5,y:6},
-];
+console.clear()
+const people = [
+   {
+      name: 'leandro',
+      age: '30'
+   },
+   {
+      name: 'Ana',
+      age: '25'
+   },
+   {
+      name: 'Bruna',
+      age: '18'
+   },
+]
 
-function desc(a,b){    
-   if (a.x > b.y) return -1;
-   if (a.y < b.y) return 1;
-
-   return 0;
+function orderByAsc(a, b) {
+   if (a.name > b.name) return 1
+   if (a.name < b.name) return -1
+   return 0
 }
-
-function asc(a,b){    
-    if (a.x > b.y) return 1;
-    if (a.y < b.y) return -1;
- 
-    return 0;
- }
-
-console.log('DESC', arr.sort(desc));
-console.log('ASC', arr.sort(asc));
+people.sort(orderByAsc)
+console.log("People Oerdered", people);
