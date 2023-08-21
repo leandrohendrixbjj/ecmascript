@@ -1,13 +1,9 @@
 // Const is immutable
-console.clear();
-const arr = [5, 6, 7];
+console.clear()
 
 try {
-    arr = [1, 2, 3];
+    const name = 'leandro'
+    name = 'soares'
 } catch (error) {
-    console.log(`Error:${error}`);
+    console.log("Não é possível alterar o valor de uma cost");
 }
-
-arr[2] = 45; // js accept it
-
-console.log(arr);

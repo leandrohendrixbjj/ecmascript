@@ -1,10 +1,13 @@
-//When let is declared outside of a block, its value can not be assign
+// Neste caso o result dentro do bloco não possui let, então será considerada
+// a declaração fora do escopo.
 console.clear()
 
 let result;
 for (let row = 0; row < 3; row++) {
-  if (row === 2)
+  if (row === 2) {
     result = row;
+  }
 }
 
 console.log(`Result:${result}`);
+
