@@ -1,9 +1,18 @@
-function countDown(num){
-  if(num < 1){ return []; }
-    
-  const array = countDown(num -1);
-  array.unshift(num);
-  return array;
+console.clear()
+
+function countDown(num) {
+  if (num < 1) return []
+
+  // Neste ponto é feita a recursividade
+  // Onde os valores são add em uma stack(pilha)
+  // Depois que if for satisfatório
+  // Os valores da stack são add no push
+  const stack = countDown(num - 1)
+  stack.push(num)
+
+  return arr
 }
-  
-console.log(countDown(5));
+
+const data = countDown(5)
+
+console.log(data);

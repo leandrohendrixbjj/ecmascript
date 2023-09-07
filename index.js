@@ -1,9 +1,10 @@
-console.clear()
+const nums = [];
 
-const livros = [
-    { id: '1', title: 'NodeJs' },
-    { id: '2', title: 'PHP' }
-]
+function fibo(n){
+  if(n == 1){ return 1; };
+  
+  return fibo(n - 1) 
+}
 
-livros.splice(0, 1)
-console.log(livros);
+console.log(fibo(5));
+console.log(nums);
