@@ -17,18 +17,14 @@ class Node {
 function builtTree(root) {
     const stack = [root];
     const data = []
+
     while (stack.length > 0) {
-        let current = stack.shift()
+        let current = stack.pop() // Remove do final da pilha
 
         data.push(current.val)
 
-        if (current.left) {
-            stack.push(current.left)
-        }
-
-        if (current.right) {
-            stack.push(current.right)
-        }
+        if (current.left) stack.push(current.left)
+        if (current.right) stack.push(current.right)
 
     }
     return data
@@ -48,6 +44,7 @@ b.right = e
 c.right = f
 
 const data = builtTree(a);
+console.log(a);
 console.log(data);
 
 
