@@ -1,5 +1,5 @@
 console.clear()
-// Se concaternar com undefined, receberemos uma string de undefined ou null
+// Se concaternar com undefined ou null, receberemos uma string de undefined ou null
 const name = 'leandro'
 const age = undefined
 
