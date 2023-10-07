@@ -4,8 +4,6 @@
 // / \  \
 // D E   F
 
-const { model } = require("mongoose")
-
 class Node {
     constructor(val) {
         this.val = val
