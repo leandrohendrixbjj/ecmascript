@@ -1,20 +1,21 @@
 console.clear()
 
-function sum(arr, index) {
-    if (index <= 0) return 0
+const a = require('./helpIndex.js')
 
-    // Nesse trecho vamos obter o valor
-    // da posição do array
-    // 1- stack = [20]
-    // 2- stack = [20,10]
-    let stack = sum(arr, index - 1)
+function tree(node) {
+    const queue = [node]
+    const data = []
 
-    // Neste ponto executamos a soma
-    // R: 30
-    stack += arr[index - 1]
+    while (queue.length > 0) {
+        let current = queue.pop()
+        data.push(current.val)
 
-    return stack
-
+        if (current.left) queue.push(current.left)
+        if (current.right) queue.push(current.right)
+    }
+    return data
 }
-const data = sum([10, 20, 40], 2)
-console.log(data);
+
+const r = tree(a)
+
+console.log(r);
