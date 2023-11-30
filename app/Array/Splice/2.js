@@ -4,7 +4,7 @@ console.clear();
 
 const arr = ['Honda', 'Suzuki', 'Royal Enfield']
 const arrPosition = arr.indexOf('Suzuki');
-const action = 0; // 0 = add
+const action = 0; // 0 => add 1 
 const value = 'Yamaha'
 
 arr.splice(arrPosition, action, value) // [ 'Honda', 'Yamaha', 'Suzuki', 'Royal' ]

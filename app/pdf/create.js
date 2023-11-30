@@ -1,3 +1,4 @@
+// Gera um arquivo pdf
 console.clear()
 
 const pdf = require('html-pdf')

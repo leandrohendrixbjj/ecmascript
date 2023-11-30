@@ -14,18 +14,19 @@
     "body-parser": "1.18.3",
     "dotenv": "^16.0.3",
     "express": "^4.17.1",
+    "html-pdf": "^3.0.1",
     "json2csv": "^6.0.0-alpha.2",
     "jsontoxml": "^1.0.1",
     "marko": "4.13.4-1",
     "moment": "^2.29.4",
-    "mongodb": "^4.12.1",
+    "mongodb": "^6.2.0",
+    "mongoose": "^7.3.4",
     "morgan": "~1.9.1",
     "node-fetch": "^2.6.1",
     "socket.io": "^4.7.1",
     "sqlite3": "5.0.2"
   },
   "devDependencies": {
-    "mongoose": "^6.6.2",
     "nodemon": "^2.0.14"
   }
 }
