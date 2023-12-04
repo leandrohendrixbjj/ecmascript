@@ -1,6 +1,5 @@
+// Remove do inicio do array
 console.clear();
-
-// Remove Inicio
 
 const arr = ['Honda', 'Suzuki']
 

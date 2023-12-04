@@ -1,6 +1,5 @@
+// Remove o último elemento do array
 console.clear();
-
-// Remove o último
 
 const arr = ['Honda', 'Suzuki']
 

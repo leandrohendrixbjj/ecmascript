@@ -1,6 +1,5 @@
+// Add no final do array
 console.clear();
-
-// Add no final
 
 const arr = ['Honda', 'Suzuki']
 

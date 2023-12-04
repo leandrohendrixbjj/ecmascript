@@ -1,6 +1,5 @@
+// Add no inicio do array
 console.clear();
-
-// Add no Inicio
 
 const arr = ['Honda', 'Suzuki']
 

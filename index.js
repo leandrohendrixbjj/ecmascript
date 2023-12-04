@@ -1,19 +1,9 @@
-console.clear()
+console.clear();
 
-const pdf = require('html-pdf')
+const arr = ['Honda', 'Suzuki']
 
-const content = `
-    <html>
-      <body>
-         <h1>Leandro Soares</h1>
-      </body>
-    </html>
-`
+console.log("LAST:", arr[arr.length - 1])
 
-pdf.create(content, {}).toFile("./mypdf.pdf", (err, res) => {
-    if (err) {
-        console.log(`Error na geração do pdf: ${err}`);
-    } else {
-        console.log(res);
-    }
-})
+// OR
+
+console.log("LAST: II ", arr.pop());
