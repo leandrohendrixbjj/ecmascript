@@ -7,7 +7,7 @@ const user = {
     }
 }
 
-const { age: userAge, email: userEmail } = user.person
+const { person: { age: userAge, email: userEmail } } = user;
 
 console.log('Email: ', userEmail);
 console.log('Age: ', userAge);

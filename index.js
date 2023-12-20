@@ -1,9 +1,14 @@
-console.clear();
+console.clear()
 
-const arr = ['Honda', 'Suzuki']
+const person = {
+    data: {
+        name: 'leandro',
+        age: 40
+    }
+}
 
-console.log("LAST:", arr[arr.length - 1])
+const { data: { name: userName, age: userAge } } = person
 
-// OR
+console.log(userName);
+console.log(userAge);
 
-console.log("LAST: II ", arr.pop());
