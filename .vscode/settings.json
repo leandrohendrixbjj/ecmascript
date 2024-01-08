@@ -11,7 +11,11 @@
             "name": "localhost",
             "database": "livro",
             "username": "root",
-            "password": ""
+            "password": "",
+            "editor.tabSize": 2,
+            "editor.codeActionsOnSave": {
+                "source.fixAll.eslint": true
+            }
         }
     ]
 }

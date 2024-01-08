@@ -1,0 +1,3 @@
+=> install eslint: npm init @eslint/config
+   1. Fix program   => npx eslint index.js
+   2. Fix directory => npx eslint ./src 
