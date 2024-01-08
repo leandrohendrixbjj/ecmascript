@@ -1,7 +1,7 @@
 console.clear();
 
 // Regular Date
-let date = new Date(2022, 09, 27);
+let date = new Date(2022, 9, 27);
 console.log(`Data: ${date}`);
 
 // As String

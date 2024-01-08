@@ -6,8 +6,8 @@ const options = {
     month: "numeric",
     day: "numeric",
     hour: 'numeric',
-    minutes: 'numeric',
-    seconds: 'numeric'
+    minute: 'numeric',
+    second: 'numeric'
 }
 
 const actual = date.toLocaleDateString("pt-br", { ...options })
