@@ -1,30 +1,15 @@
-console.clear()
+console.clear();
+const date = new Date("2022/01/25 13:23:59") // 2022-01-25T03:00:00.000Z
 
-const date = new Date('1980-08-31 00:00:00')
-
-try {
-
-    if (!isValidDate(date)) {
-        throw new Error("Data inválida")
-    }
-    const options = { year: 'numeric', month: 'numeric', day: 'numeric' }
-    const actual = date.toLocaleDateString('pt-BR', options)
-    console.log(actual);
-} catch (error) {
-    console.log(error);
+const options = {
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric'
 }
 
-function isValidDate(dateString) {
-    let date = new Date(dateString)
+const actual = date.toLocaleDateString("pt-br", { ...options })
 
-    const values = {
-        year: "1900"
-    }
-
-    if (date.getFullYear() < values.year)
-        throw new Error("Ano inválido")
-
-
-    return !isNaN(date.getTime())
-}
-
+console.log(actual);
