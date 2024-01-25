@@ -1,14 +1,15 @@
+// Diferença entre datas em horas
 console.clear();
-const moment = require('moment');
+const moment = require('moment')
 
-const dtLast = '2023-05-12 18:00:10';
-const dtPenult = '2023-05-12 18:00:00';
+const first  = '2023-01-01 08:00:00'
+const second = '2023-01-01 12:00:00'
 
-const diff = moment(dtLast, "YYYY/MM/DD HH:mm:ss").diff(dtPenult, "YYYY/MM/DD HH:mm:ss");
-const duration = moment.duration(diff);
+const diff = moment(second, "YYYY/MM/DD HH:mm:ss").diff(first, "YYYY/MM/DD HH:mm:ss")
+const result = moment.duration(diff);
 
-const timeDiff = Math.floor(duration.asHours()) + moment.utc(diff).format(":mm:ss");
+const timeDiff = Math.floor( result.asHours() ) + moment.utc(diff).format(":mm:ss")
 
-console.log("timeDiff", timeDiff);
+console.log(timeDiff);
 
 

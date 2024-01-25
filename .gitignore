@@ -3,6 +3,8 @@ app/vscode
 /node_modules/
 big.file
 .env
+stocks.js
+stocks.json
 
 
 

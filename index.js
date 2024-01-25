@@ -1,15 +1,20 @@
 console.clear();
-const date = new Date("2022/01/25 13:23:59") // 2022-01-25T03:00:00.000Z
 
-const options = {
-    year: "numeric",
-    month: "numeric",
-    day: "numeric",
-    hour: 'numeric',
-    minute: 'numeric',
-    second: 'numeric'
-}
+// Regular Date
+let date = new Date(2022, 9, 27);
+console.log(`Data: ${date}`);
 
-const actual = date.toLocaleDateString("pt-br", { ...options })
+// As String
+date = new Date('2022/09/01');
+console.log(`Data: ${date}`);
 
-console.log(actual);
+// TimeZone from Sao Paulo
+const dateTz = new Date();
+console.log(
+    dateTz.toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })
+);
+
+console.log(
+    dateTz.toLocaleString('UTC', { timeZone: 'UTC' })
+);
+
