@@ -1,5 +1,6 @@
-console.clear();
 // GET => Obtem um valor desejado
+console.clear()
+
 const people = [
     { id: 3, name: "Ribeiro" },
     { id: 1, name: "Leandro" },
@@ -8,11 +9,8 @@ const people = [
 
 const map = new Map();
 for (let person of people) {
-    let { id } = person;
+    let { id } = person
     map.set(id, { ...person })
 }
 
-console.log(map.get(1));
-
-
-
+console.log(map.get(1))

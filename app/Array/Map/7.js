@@ -1,4 +1,6 @@
 // GET => Obtem um valor desejado
+console.clear()
+
 const data = [
     { id: 1, name: 'Leandro' },
     { id: 2, name: 'Soares' },

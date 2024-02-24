@@ -1,15 +1,13 @@
-//Verifica se x e y tem o mesmo valor dentro da mesma linha
-//Retorna as vezes que isso se repetiu no objeto
-const objects = [
-  { x: 1, y: 1 },
-  { x: 2, y: 20 },
-  { x: 3, y: 30 },
-  { x: 3, y: 4 },
-  { x: 5, y: 5 },
-];
+console.clear();
 
-const count = objects.filter((value, index, arr) => {
-  return value.x == value.y;
-});
+//Call: return value that was removed by pop method
+//The pop() method reads the length property 
+//Witout length it won't work
+const arr = {
+  length: 3,
+  unrelated: "foo",
+  2: 4,
+};
 
-console.log(count.length);
+console.log(Array.prototype.pop.call(arr)); // 4
+console.log(arr); // { length: 2, unrelated: 'foo' }

@@ -1,5 +1,6 @@
-console.clear();
 // Add uma key para cada linha do array
+console.clear();
+
 const people = [
     { id: 3, name: "Ribeiro" },
     { id: 1, name: "Leandro" },

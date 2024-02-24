@@ -1,6 +1,6 @@
+// we store the collection on the object itself 
 console.clear();
 
-// we store the collection on the object itself 
 const collections = {
     length: 0,
     addElements(...data) {

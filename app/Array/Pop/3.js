@@ -1,8 +1,8 @@
-console.clear();
-
-//Call: return value that was removed by pop method
+//Call: return value that was removed by pop method only number
 //The pop() method reads the length property 
 //Witout length it won't work
+console.clear();
+
 const arr = {
     length: 3,
     unrelated: "foo",
