@@ -1,6 +1,7 @@
-console.clear();
 // Soma de valores de um objeto de um array
 // Quando se usa objetos é importante passar a variavel valor inicial
+console.clear();
+
 const inicialValue = 0;
 const obj = [
     { val: 1 }, { val: 2 },

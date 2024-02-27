@@ -1,5 +1,5 @@
-console.clear();
 // Retorna um único valor de retorno. Que pode não ser um array
+console.clear();
 const arr = [1, 2, 3];
 const initialValue = 0;
 

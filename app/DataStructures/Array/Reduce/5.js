@@ -1,5 +1,6 @@
-console.clear();
 // Agrupando objetos por uma propriedade
+console.clear();
+
 let pessoas = [
     { nome: "leandro", uf: "SP" },
     { nome: "Soares", uf: "RJ" },
@@ -19,5 +20,5 @@ function groupBy(pessoas, atributo) {
     }, {})
 }
 
-let group = groupBy(pessoas, "uf");
-console.log(group);
+let data = groupBy(pessoas, "uf");
+console.log(data);

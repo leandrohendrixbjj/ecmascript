@@ -1,13 +1,27 @@
-console.clear();
+console.clear()
 
-//Call: return value that was removed by pop method
-//The pop() method reads the length property 
-//Witout length it won't work
-const arr = {
-  length: 3,
-  unrelated: "foo",
-  2: 4,
-};
+const data = [
+  { name: 'Leandro', state: 'SP' },
+  { name: 'Soares', state: 'MG' },
+  { name: 'Ribeiro', state: 'SP' }
+]
 
-console.log(Array.prototype.pop.call(arr)); // 4
-console.log(arr); // { length: 2, unrelated: 'foo' }
+function groupBy(data, state) {
+  return data.reduce((acc, data) => {
+    const key = data['state']
+
+    if (!acc[key]) {
+      acc[key] = []
+    }
+
+    acc[key].push(data)
+
+    return acc
+
+  }, {})
+}
+
+
+const group = groupBy(data, 'state')
+
+console.log(group);
