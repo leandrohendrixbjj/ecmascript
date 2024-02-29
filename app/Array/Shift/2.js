@@ -1,5 +1,6 @@
-console.clear();
 // Print undefined if the array is empty.
+console.clear();
+
 const arr = [];
 
 if (arr.shift() == undefined)

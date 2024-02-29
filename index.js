@@ -1,27 +1,10 @@
-console.clear()
+//  Method is often used in condition inside while loop.
+console.clear();
 
-const data = [
-  { name: 'Leandro', state: 'SP' },
-  { name: 'Soares', state: 'MG' },
-  { name: 'Ribeiro', state: 'SP' }
-]
+const names = ['leandro', 'soares', 'ribeiro'];
 
-function groupBy(data, state) {
-  return data.reduce((acc, data) => {
-    const key = data['state']
-
-    if (!acc[key]) {
-      acc[key] = []
-    }
-
-    acc[key].push(data)
-
-    return acc
-
-  }, {})
+while (typeof (nome = names.shift()) !== 'undefined') {
+  console.log(nome);
 }
 
-
-const group = groupBy(data, 'state')
-
-console.log(group);
+console.log(`Arr: ${names}`);

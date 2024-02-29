@@ -1,4 +1,5 @@
 // Removendo itens duplicados num array
+console.clear()
 
 const nums = [5, 0, 1, 1, 3, 2, 2];
 const withoutDuplicity = nums.sort().reduce((acc, value, index, row) => {

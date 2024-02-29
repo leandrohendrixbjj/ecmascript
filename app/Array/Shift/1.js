@@ -1,6 +1,7 @@
-console.clear();
 // Remove the first element from an array and returns that removed element. 
 // Shift has the similar behaviour to pop()
+console.clear();
+
 const arr = [1, 2];
 
 let value = arr.shift() // 1 
