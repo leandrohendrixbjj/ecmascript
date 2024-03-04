@@ -2,6 +2,8 @@
 //O Array original não é modificado.
 //slice = > fatiar
 
+console.clear()
+
 const arr = ['leandro', 'soares', 'ribeiro', 'karina'];
 
 console.log(arr.slice(0)) //[ 'leandro', 'soares', 'ribeiro', 'karina' ]

@@ -1,10 +1,10 @@
-//  Method is often used in condition inside while loop.
+// Os arguments dentro de uma função são um exemplo de 'objeto array-like'.
 console.clear();
 
-const names = ['leandro', 'soares', 'ribeiro'];
-
-while (typeof (nome = names.shift()) !== 'undefined') {
-  console.log(nome);
+function list() {
+    return Array.prototype.slice.call(arguments)
 }
 
-console.log(`Arr: ${names}`);
+const data = list(1, 2);
+
+console.log(data);
