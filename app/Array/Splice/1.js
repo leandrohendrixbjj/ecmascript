@@ -1,15 +1,14 @@
+// Splice => Emendar => altera o conteúdo de uma lista, 
+// add novos elementos enquanto remove elementos antigos.
+
 console.clear();
 
-// Remove elemento conforme a posição informada
+const months = ['Jan', 'March', 'April', 'June'];
 
-const arr = ['Honda', 'Suzuki', 'Royal Enfield']
-const arrPosition = arr.indexOf('Honda');
-const action = 1; // 1 = Remove
+const index = 1;
+const deleteCount = 0;
+const element = 'Feb';
 
-arr.splice(arrPosition, action) // [ 'Suzuki', 'Royal Enfield' ]
+months.splice(index, deleteCount, element);
 
-
-
-
-
-
+console.log(months);

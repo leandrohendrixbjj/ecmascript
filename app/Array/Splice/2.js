@@ -1,18 +1,10 @@
 console.clear();
 
-// Add um novo elemento no array
+const arr = ["angel", "clown", "mandarin", "surgeon"];
+const start = 4; // Indica de onde a alteração deve ser iniciada
+const action = 0; // 0 => Add
+const value = 'I am used do it' // Valor que será add não obrigatório
 
-const arr = ['Honda', 'Suzuki', 'Royal Enfield']
-const arrPosition = arr.indexOf('Suzuki');
-const action = 0; // 0 => add 1 
-const value = 'Yamaha'
+arr.splice(start, action, 'I am used do it');
 
-arr.splice(arrPosition, action, value) // [ 'Honda', 'Yamaha', 'Suzuki', 'Royal' ]
-
-
-
-
-
-
-
-
+console.log(arr);
