@@ -6,18 +6,18 @@ let binarySearch = (arr, target) => {
 
   let data = []
   let peek = []
-  let indexPosition = Math.ceil(arr.length / 2 - 1)
-  let valuePosition = arr[indexPosition]
+  let valueAtMiddleware = Math.ceil(arr.length / 2 - 1)
+  let indexAtMiddleware = arr[valueAtMiddleware]
 
-  if (target == valuePosition) return true
+  if (target == indexAtMiddleware) return true
 
   // On Left
-  if (target <= valuePosition)
-    data = arr.slice(0, indexPosition)
+  if (target <= indexAtMiddleware)
+    data = arr.slice(0, valueAtMiddleware)
 
   // On Right
-  if (target >= valuePosition)
-    data = arr.slice(indexPosition, arr.length)
+  if (target >= indexAtMiddleware)
+    data = arr.slice(valueAtMiddleware, arr.length)
 
   // Primeira tantativa de achar o valor no array
   peek = data.filter(item => item == target)
@@ -26,10 +26,10 @@ let binarySearch = (arr, target) => {
 
   // Usamos esse trecho de código, quando não temos um array ordenado
   if (!peek) {
-    if (target >= valuePosition) {
-      data = arr.slice(0, indexPosition)
+    if (target >= indexAtMiddleware) {
+      data = arr.slice(0, valueAtMiddleware)
     } else {
-      data = arr.slice(indexPosition, arr.length)
+      data = arr.slice(valueAtMiddleware, arr.length)
     }
   }
   return data
