@@ -1,31 +1,16 @@
-// Busca binária em uma lista ordenada
 console.clear()
 
-const data = [11, 5, 4, 3, 2, 1].sort((a, b) => a - b)
-const target = 5
+function factor(num) {
+  if (num < 1) return 1
 
-let newData = []
-const positionAtMiddleware = Math.ceil(data.length / 2 - 1)
-const valueAtMiddleware = data[positionAtMiddleware]
-
-if (target == valueAtMiddleware){
-  console.log("Achou");
-  process.exit()
+  // Neste ponto é feita a recursividade
+  // Js cria uma stack (pilha) com o resultado da chamada a factor()
+  // Depois que if for satisfatório
+  // Add os valores que estão na stack em data
+  const data = num * factor(num - 1)
+  return data
 }
-
-// Right
-if (target > valueAtMiddleware) {
-  newData = data.slice(positionAtMiddleware, data.length)
-}
-
-// Left
-if (target < valueAtMiddleware) {
-  newData = data.slice(0, positionAtMiddleware)
-}
-
-// First try to find the value
-const search = newData.filter(item => item == target)
 
 console.log(
-  (search.length) ? 'Achou' : 'Não achou'
-);
+  `Result: ${factor(5)}`
+)

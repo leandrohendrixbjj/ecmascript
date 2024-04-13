@@ -1,18 +1,18 @@
 console.clear()
+const data = []
 
 function countDown(num) {
   if (num < 1) return []
 
   // Neste ponto é feita a recursividade
-  // Onde os valores são add em uma stack(pilha)
+  // Js cria uma stack (pilha) com o resultado da chamada a countDown()
   // Depois que if for satisfatório
-  // Os valores da stack são add no push
-  const stack = countDown(num - 1)
-  stack.push(num)
-
-  return arr
+  // Add os valores que estão na stack em data
+  countDown(num - 1)
+  data.push(num)
+  return data
 }
 
-const data = countDown(5)
-
-console.log(data);
+console.log(
+  `Result: ${countDown(5)}`
+)
