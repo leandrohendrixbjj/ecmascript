@@ -1,16 +1,18 @@
 console.clear()
+// Informe o valor e vai obter a sequencia de Fibonacci
 
-function factor(num) {
-  if (num < 1) return 1
+//Values          1  ,2  ,3,  4  ,5 , 6 , 7 , 8 , 9
+//Sequence Fibo [ 1 , 2 , 3 , 5 , 8 , 13, 21, 34, 55]
 
-  // Neste ponto é feita a recursividade
-  // Js cria uma stack (pilha) com o resultado da chamada a factor()
-  // Depois que if for satisfatório
-  // Add os valores que estão na stack em data
-  const data = num * factor(num - 1)
-  return data
+function fibo(num){
+  if (num == 1) return 1
+  if (num == 2) return 2
+
+  return fibo(num - 1) + fibo(num - 2)
 }
 
+
 console.log(
-  `Result: ${factor(5)}`
-)
+  fibo(6)
+);
+
