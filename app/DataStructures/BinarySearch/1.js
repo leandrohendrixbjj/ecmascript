@@ -1,5 +1,5 @@
 console.clear()
-
+// Usado para lista ordenada
 function binarySearch(data, target) {
   let lower = 0
   let higher = data.length - 1

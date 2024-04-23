@@ -1,5 +1,5 @@
-console.clear();
-
+console.clear()
+// Usando quando a lista não é ordenada
 let arr = [5, 3, 2, 8, 0, 4, 10, 30, 20, 80, 2, 7, 100]
 
 let binarySearch = (arr, target) => {
@@ -39,8 +39,8 @@ const target = 2
 const data = binarySearch(arr, target).find(item => item == target)
 
 if (data) {
-  console.log(`Achou o valor: ${target} na listagem`);
+  console.log(`Achou o valor: ${target} na listagem`)
 } else {
-  console.log(`Valor: ${target} não consta no array`);
+  console.log(`Valor: ${target} não consta no array`)
 }
 
