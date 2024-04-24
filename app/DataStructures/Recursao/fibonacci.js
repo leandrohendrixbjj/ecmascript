@@ -14,7 +14,7 @@ console.clear()
      9          34
 */
 function fibo(num) {
-  if (num <= 1) return num
+  if (num < 2) return num
   const stack = fibo(num - 1) + fibo(num - 2)
   return stack
 }
