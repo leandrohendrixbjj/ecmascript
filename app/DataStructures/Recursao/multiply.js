@@ -1,15 +1,13 @@
-console.clear();
-var sum = [];
+console.clear()
 
-function multiply(n1, n2) {
+function multiply(x, y) {
 
-   if (n1 == 0 || n2 == 0) { return 0; }
+  if (x == 0 || y == 0) return 0
+  if (y == 1) return x
 
-   if (n2 == 1) { return n1; }
-
-   sum.push(n1 + n1, n2 - 1);
-   return n1 + (multiply(n1, n2 - 1));
+  const stack = x + multiply(x, y - 1)
+  return stack
 }
 
-console.log(multiply(5, 4));
-console.log(sum);
+console.log(multiply(2, 4))
+//console.log(sum)

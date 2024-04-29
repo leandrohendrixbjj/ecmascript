@@ -1,11 +1,14 @@
-console.clear();
+console.clear()
 
-function rangeOfNumbers(startNum, endNum) {
-  if (startNum > endNum) { return [] }
+function range(start, end) {
 
-  const array = rangeOfNumbers(startNum, endNum - 1);
-  array.push(endNum);
-  return array;
-};
+  if (start > end) return []
 
-console.log(rangeOfNumbers(1, 5));
+  const stack = range(start, end - 1)
+  stack.push(end)
+  return stack
+}
+
+console.log(
+  range(1, 3)
+)

@@ -1,11 +1,12 @@
-console.clear();
+console.clear()
 
-function soma(n) {
-    if (n == 1) return 1;
+function soma (num) {
+  if (num === 1) return 1
 
-    return n += soma(n - 1);
+  const stack = num += soma(num - 1)
+  return stack
 }
 
 console.log(
-    soma(5)
-);
+  soma(5)
+)
