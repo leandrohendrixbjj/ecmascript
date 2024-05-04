@@ -31,5 +31,6 @@
   "devDependencies": {
     "nodemon": "^2.0.14",
     "standard": "^17.1.0"
-  }
+  },
+  "type": "module"
 }
