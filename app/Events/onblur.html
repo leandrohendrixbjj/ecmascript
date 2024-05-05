@@ -1,0 +1,21 @@
+<!-- onblur => Quando o input perde o foco -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  Informe o seu nome: <input type="text" id="iptNome" onblur="setNameToUpperCase()">
+</body>
+
+</html>
+<script>
+  function setNameToUpperCase() {
+    const inputName = document.getElementById("iptNome");
+    inputName.value = inputName.value.toUpperCase()
+  }
+</script>
