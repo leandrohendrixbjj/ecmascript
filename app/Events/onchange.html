@@ -1,0 +1,27 @@
+<!-- onblur => Quando o input perde o foco -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form>
+    <select id="company" onchange="showMessage()">
+      <option value="Gimba">Gimba</option>
+      <option value="Totvs">Totvs</option>
+      <option value="Apcd">Apcd</option>
+    </select>
+  </form>
+</body>
+
+</html>
+<script>
+  function showMessage() {
+    const company = document.getElementById("company")
+    alert(`You selected: ${company.value}`)
+  }
+</script>

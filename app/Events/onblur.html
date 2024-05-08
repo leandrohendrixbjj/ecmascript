@@ -9,12 +9,12 @@
 </head>
 
 <body>
-  Informe o seu nome: <input type="text" id="iptNome" onblur="setNameToUpperCase()">
+  Informe o seu nome: <input type="text" id="iptNome" onblur="setName()">
 </body>
 
 </html>
 <script>
-  function setNameToUpperCase() {
+  function setName() {
     const inputName = document.getElementById("iptNome");
     inputName.value = inputName.value.toUpperCase()
   }
