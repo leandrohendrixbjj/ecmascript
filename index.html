@@ -8,13 +8,13 @@
 </head>
 
 <body>
-  Informe seu nome: <input type="text" id="iptName" onfocus="setColor()">
+  Selecione <input type="text" value="Welcome to Js Events" id="iptName" onselect="showTest()">
+  <p id="showMessage"></p>
 </body>
 
 </html>
 <script>
-  function setColor() {
-    const name = document.getElementById("iptName")
-    name.style.backgroundColor = "yellow"
+  function showTest() {
+    document.getElementById("showMessage").innerHTML = "This is onselect event"    
   }
 </script>
