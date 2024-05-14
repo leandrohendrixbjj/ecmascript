@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form onsubmit="sendDate()">
+    Informe seu nome: <input type="text" id="fname">
+    <input type="submit">
+  </form>
+
+  <br />
+
+  <form onreset="unsetDate()">
+    Voltar ao nome anterior: <input type="text" id="oldName">
+    <input type="reset">
+  </form>
+</body>
+
+</html>
+<script>
+  function sendDate() {
+    const name = document.getElementById("fname").value
+    if (!name) {
+      alert("Informe um nome.")
+    } else {
+      alert(`Welcome Mr(a) ${name}`)
+    }
+  }
+
+  function unsetDate() {
+    alert("Name update was undone")
+  }
+</script>

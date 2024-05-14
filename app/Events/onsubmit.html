@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form onsubmit="sendDate()">
+    Informe seu nome: <input type="text" id="fname">
+    <input type="submit">
+  </form>
+</body>
+
+</html>
+<script>
+  function sendDate() {
+    const name = document.getElementById("fname").value
+    if (!name) {
+      alert("Informe um nome.")
+    } else {
+      alert(`Welcome Mr(a) ${name}`)
+    }
+  }
+</script>
