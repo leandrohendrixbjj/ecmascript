@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+</head>
+
+<body>
+  <p id="evento"></p>
+  <button type="button" id="btn">Try it</button>
+</body>
+
+</html>
+<script>
+  const texto = "Evento acionado foi";
+  const btn = document.getElementById('btn');
+
+  btn.addEventListener('click', click);
+  btn.addEventListener('mouseover', over);
+  btn.addEventListener('mouseout', out);
+
+  function click() {
+    document.getElementById('evento').innerHTML = texto + ' Click';
+  }
+
+  function over() {
+    document.getElementById('evento').innerHTML = texto + ' Mouse Over';
+  }
+
+  function out() {
+    document.getElementById('evento').innerHTML = texto + ' Mouse Out';
+  }
+
+</script>
