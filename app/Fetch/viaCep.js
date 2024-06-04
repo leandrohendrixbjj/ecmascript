@@ -1,16 +1,17 @@
-const fetch = require('node-fetch');
+// Impressão dos dados do retorno da api
+console.clear()
 
-async function requestUrl(){
-   let url = `https://viacep.com.br/ws/01001000/json/`;
-   try{
-      return await fetch(url);      
-   }catch(error){
-      console.log(`Error: ${error}`);
-   }
+const fetch = require('node-fetch')
+
+async function showAdress (cep) {
+  try {
+    return await fetch(cep)
+  } catch (error) {
+    console.log(`Error: ${error}`)
+  }
 }
 
-requestUrl().then((res) => {
-   res.json().then((adress) => {
-      console.log(adress);
-   }).catch(error => console.log(`Error:${error}`));
-}).catch(error => console.log(`Error:${error}`));
+showAdress('https://viacep.com.br/ws/01001000/json/')
+  .then(data => data.json())
+  .then(adress => console.log(adress))
+  .catch(error => console.log(error))

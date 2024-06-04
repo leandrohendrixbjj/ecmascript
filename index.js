@@ -1,23 +1,17 @@
+// Impressão dos dados do retorno da api
 console.clear()
 
-const list = [10, 20, 40]
-const size = list.length
+const fetch = require('node-fetch')
 
-function sum(arr, index) {
-  if (index === 0) return 0
-
-  // Nesse trecho vamos obter o valor
-  // da posição do array
-  // 1- stack = [20]
-  // 2- stack = [20,10]
-  let stack = sum(arr, index - 1)
-
-  // Neste ponto executamos a soma
-  // R: 30
-  stack += arr[index - 1]
-
-  return stack
+async function showAdress(cep) {
+  try {
+    return await fetch(cep)
+  } catch (error) {
+    console.log(`Error: ${error}`)
+  }
 }
 
-const data = sum(list, size)
-console.log(data);
+showAdress('https://viacep.com.br/ws/01001000/json/')
+.then(data => data.json())
+.then(adress => console.log(adress)) 
+.catch(error => console.log(error))

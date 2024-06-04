@@ -1,15 +1,33 @@
-<!--Neste fetch aplicamos um return dentro do primeiro then. 
-    Veja a diferença con arquivo fetch.html-->
+<!--Preenche dados em tela com retorno da api-->
 <!DOCTYPE html>
 <html lang="en">
 
+<body>
+  Rua: <input type="text" id="rua" style="margin-bottom: 5px" /> <br />
+  Bairro: <input type="text" id="bairro" style="margin-bottom: 5px" /> <br />
+  Cep: <input type="text" id="cep" style="margin-bottom: 5px" />
+  <button id="btn" onclick="fillCep()">Click</button>
+</body>
+
 </html>
 <script>
-   const request = 'https://viacep.com.br/ws/03664010/json/';
+  async function seekCep() {
+    return await window.fetch('https://viacep.com.br/ws/03664010/json/')
+      .then(data => data.json())
+      .then(adress => adress)
+      .catch(error => console.log(error))
+  }
 
-   window.fetch(request)
-      .then(response => response.json())
-      .then(fullAdress => console.log(fullAdress))
-      .catch(err => console.log(err));
+  async function fillCep() {
+    const adress = await seekCep()
+    
+    const rua = document.getElementById('rua')
+    const bairro = document.getElementById('bairro')
+    const cep = document.getElementById('cep')
+
+    rua.value = adress.logradouro
+    bairro.value = adress.bairro
+    cep.value = adress.cep
+  }
 
 </script>

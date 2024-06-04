@@ -1,15 +1,16 @@
-const fetch = require('node-fetch');
+// Impressão do status code, da chamada feita no request
+console.clear()
 
-async function request() {
-   let url = "https://www.totvs.com.br";
+const fetch = require('node-fetch')
 
-   try {
-      return await fetch(url)
-   } catch (error) {
-      console.log(`Error: ${error}`);
-   }
+async function request (endPoint) {
+  try {
+    return await fetch(endPoint)
+  } catch (error) {
+    console.log(`Error: ${error}`)
+  }
 }
 
-request()
-   .then(response => console.log(response.status))
-   .catch(err => console.log(`Error:${error}`));
+request('https://www.totvs.com.br')
+  .then(data => console.log(data.status))
+  .catch(error => console.log(`Error:${error}`))
