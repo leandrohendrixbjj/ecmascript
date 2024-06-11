@@ -1,7 +1,7 @@
 // Ambas as funções tem o mesmo resultado
 console.clear()
 
-function isRed(fruit) {
+function isBlue (fruit) {
   if (fruit === 'apple' ||
     fruit === 'cherries' ||
     fruit === 'strawberry') {
@@ -15,4 +15,8 @@ const isRed = fruit =>
 
 console.log(
   isRed('apple')
+)
+
+console.log(
+  isBlue('apple')
 )

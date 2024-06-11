@@ -1,21 +1,13 @@
-// Ambas as funções tem o mesmo resultado
 console.clear()
 
-function isRed2(fruit){
+// Cria um arquivo com dados
+const data = ['Leandro', 'Soares', 'Ribeiro']
 
-  if (fruit === 'apple' ||
-      fruit === 'cherries' ||
-      fruit === 'strawberry' ){
-    return true
-  }
-  return false
-  
+const fs = require('fs')
+const file = fs.createWriteStream('./names.txt')
+
+for (let row = 0; row < data.length; row++) {
+  file.write(`${row}-${data[row]};\n`)
 }
 
-const isRed = fruit =>
-  ['apple', 'cherries', 'strawberry'].includes(fruit)
-
-
-console.log(
-  isRed('apple')
-)
+file.end()
