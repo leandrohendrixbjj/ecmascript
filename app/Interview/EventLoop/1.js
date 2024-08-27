@@ -1,17 +1,15 @@
-console.clear();
+console.clear()
 
 setTimeout(() => {
-    console.log("Task");
-}, 0);
+  console.log('Task')
+}, 0)
 
 Promise.resolve(true).then(() => {
-    console.log("MicroTaskas");
+  console.log('MicroTaskas')
 })
 
 queueMicrotask(() => {
-    console.log("MicroTaskas");
-});
+  console.log('MicroTaskas')
+})
 
-console.log("Call Stack");
-
-
+console.log('Call Stack')

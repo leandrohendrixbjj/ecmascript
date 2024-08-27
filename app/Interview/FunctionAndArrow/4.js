@@ -1,15 +1,14 @@
-// 1-) setInterval é uma função global o seu this pertence é this do obj window
+// 1-) Arrow: quando usamos new ela sempre vai considerar o this do objeto que foi invocado.
 
-console.clear();
+console.clear()
 
-function Person() {
-    that = this; // Isso é um modo elegante de resolver o 'problema' anterior
-    this.age = 0
+function Person () {
+  this.age = 0
 
-    setInterval(function () {
-        that.age = that.age + 1
-        console.log('Qual é a idade', that.age)
-    }, 1000)
+  setInterval(() => {
+    this.age = this.age + 1
+    console.log('Qual é a idade', this.age)
+  }, 1000)
 }
-const p = new Person()
-
+/* eslint-disable */
+new Person()

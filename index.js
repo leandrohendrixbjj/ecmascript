@@ -1,13 +1,12 @@
 console.clear()
 
-// Cria um arquivo com dados
-const data = ['Leandro', 'Soares', 'Ribeiro']
+function Person() {
+  this.age = 0
 
-const fs = require('fs')
-const file = fs.createWriteStream('./names.txt')
-
-for (let row = 0; row < data.length; row++) {
-  file.write(`${row}-${data[row]};\n`)
+  setInterval(() => {
+    this.age += 1
+    console.log(`Age is ${this.age}`)
+  },1000)
 }
 
-file.end()
+new Person()

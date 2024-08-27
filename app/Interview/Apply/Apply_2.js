@@ -1,13 +1,8 @@
-console.clear();
+console.clear()
 
-const arr = [1, 2, 3];
+const arr = [1, 2, 3]
 
 /* utilizando Math.min/Math.max apply */
-var max = Math.max.apply(null, arr)
+const max = Math.max.apply(null, arr)
 
-console.log(`Max:${max}`); //3
-
-
-
-
-
+console.log(`Max:${max}`) // 3

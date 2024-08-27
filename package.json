@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js",
-    "dev": "nodemon stocks.js"
+    "start": "npx nodemon index.js",
+    "dev": "npx nodemon stocks.js"
   },
   "author": "",
   "license": "ISC",
@@ -29,7 +29,6 @@
     "sqlite3": "5.0.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.14",
     "standard": "^17.1.0"
   },
   "type": "commonjs"

@@ -2,12 +2,12 @@
 // 2-) Arrows precisam está associadas a uma variável
 // 3-) Arrows permite retornar valores sem usar a palavra chave return
 
-console.clear();
+console.clear()
 
 const sumArrow = (a, b) => a + b
-console.log("Arrow", sumArrow(1, 2));
+console.log('Arrow', sumArrow(1, 2))
 
-function sum(a, b) {
-    return a + b
+function sum (a, b) {
+  return a + b
 }
-console.log("Function", sum(1, 2));
+console.log('Function', sum(1, 2))
