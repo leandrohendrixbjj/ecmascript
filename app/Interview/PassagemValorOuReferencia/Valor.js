@@ -1,14 +1,16 @@
-console.clear();
-// A passagem por valor, estamos passando uma CÓPIA do items para a função.
-// Essa cópia possui um endereço de memória novo.
+/*
+  Passagem Por Valor: uma CÓPIA do item e passada para a função.
+  Essa cópia possui um novo endereço de memória.
+ */
 
-let items = 1;
+console.clear()
 
-function getItem(items) {
-    items += 1
-    console.log(`Dentro da função: ${items}`) //2
+const data = 30
+
+function sum (data) {
+  data += 2
+  console.log('INSIDE FUNCTION => ', data) // 32
 }
 
-getItem(items)
-console.log(`Fora da função: ${items}`); //1
-
+sum(data)
+console.log('OUTSIDE FUNCTION => ', data) // 30

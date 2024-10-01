@@ -1,13 +1,9 @@
-console.clear();
+console.clear()
 
-// No hosting e possível ver o valor da variavel, antes da declação
-// Eleva a função para o topo, function declarations
+// Hosting: eleva a função para o topo, function declarations
 
-console.log(
-    sum()
-);
+sum()
 
-function sum() {
-    return 1 + 1
+function sum () {
+  console.log(1 + 1)
 }
-

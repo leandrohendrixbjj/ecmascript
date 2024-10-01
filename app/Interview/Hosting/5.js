@@ -1,13 +1,10 @@
-console.clear();
+console.clear()
 
-// No hosting e possível ver o valor da variavel, antes da declação
-// Function expression não se aplica o hosting
+/* eslint-disable */
 
+// Não se aplica Hosting em ArrowFunctions
 console.log(
-    soma
-);
+  soma
+)
 
-var soma = function () {
-    return 1 + 1
-}
-
+var soma = () => 1 + 1

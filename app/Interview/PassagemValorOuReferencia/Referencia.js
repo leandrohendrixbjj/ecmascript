@@ -1,14 +1,16 @@
-console.clear();
-// A passagem por referência, estamos passando o endereço de memória
-// do items para a função. 
+/*
+  Referência: passamos o endereço de memória do items para a função.
+  Usando um objeto para validar a passagem por referência
+ */
 
-let items = { value: 1 };
+console.clear()
 
-function getItem(items) {
-    items.value += 1
-    console.log(`Dentro da função: ${items.value}`) //2
+const data = { age: 30 }
+
+function sum (data) {
+  data.age += 2
+  console.log('INSIDE FUNCTION => ', data) // 32
 }
 
-getItem(items)
-console.log(`Fora da função: ${items.value}`); //1
-
+sum(data)
+console.log('OUTSIDE FUNCTION => ', data) // 32

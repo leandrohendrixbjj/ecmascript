@@ -1,6 +1,7 @@
-console.clear();
+console.clear()
 
-// No hosting e possível ver o valor da variavel, antes da declação
-console.log(a);
-var a = 123;
-console.log(a);
+/* eslint-disable */
+// Hosting: não permite exibir o valor de a variavél não foi inicializá-la antecipadamente
+console.log(data)
+var data = 123
+console.log(data)

@@ -1,12 +1,16 @@
+/*
+  Passagem Por Valor: uma CÓPIA do item e passada para a função.
+  Essa cópia possui um novo endereço de memória.
+ */
+
 console.clear()
 
-function Person() {
-  this.age = 0
+const data = 30
 
-  setInterval(() => {
-    this.age += 1
-    console.log(`Age is ${this.age}`)
-  },1000)
+function sum(data){
+  data += 2
+  console.log("INSIDE FUNCTION => ", data) // 32
 }
 
-new Person()
+sum(data)
+console.log("OUTSIDE FUNCTION => ",data) // 30
