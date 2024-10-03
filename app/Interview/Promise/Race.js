@@ -1,19 +1,21 @@
-// Retornar a mais rápida, mesmo que nas promisses invocadas
-// Tenhamos uma que retorno error
-
 console.clear()
 
-const p1 = new Promise((resolve) => {
-  setTimeout(resolve, 500, 'p1')
+/*
+   Retornar a mais rápida, mesmo que nas promisses invocadas
+   Tenhamos uma que retorno error
+*/
+
+const store = new Promise((resolve) => {
+  setTimeout(resolve, 500, 'Store')
 })
 
-const p2 = new Promise((resolve, reject) => {
-  setTimeout(reject, 200, 'p2')
+const edit = new Promise((resolve, reject) => {
+  setTimeout(reject, 200, 'Edit')
 })
 
-const p3 = new Promise((resolve) => {
-  setTimeout(resolve, 100, 'p3')
+const remove = new Promise((resolve) => {
+  setTimeout(resolve, 100, 'Remove')
 })
-Promise.race([p1, p2, p3])
+Promise.race([store, edit, remove])
   .then(res => console.log(res))
   .catch(error => console.log(error))

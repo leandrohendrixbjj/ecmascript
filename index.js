@@ -1,16 +1,18 @@
-/*
-  Passagem Por Valor: uma CÓPIA do item e passada para a função.
-  Essa cópia possui um novo endereço de memória.
- */
-
 console.clear()
 
-const data = 30
+const a = new Promise((resolve) => {
+  setTimeout(resolve,500,'A')
+})
 
-function sum(data){
-  data += 2
-  console.log("INSIDE FUNCTION => ", data) // 32
-}
+const b = new Promise((resolve,reject) => {
+  setTimeout(reject,200,'B')
+})
 
-sum(data)
-console.log("OUTSIDE FUNCTION => ",data) // 30
+const c = new Promise((resolve) => {
+  setTimeout(resolve,300,'C')
+})
+
+
+Promise.race([a,b,c])
+.then(resp => console.log(resp))
+.catch(error => console.log(error))
