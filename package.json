@@ -26,10 +26,11 @@
     "morgan": "~1.9.1",
     "node-fetch": "^2.6.1",
     "socket.io": "^4.7.1",
-    "sqlite3": "5.0.2"
+    "sqlite3": "5.0.2",
+    "knex": "^2.2.0",
+    "mysql2": "^3.11.3"
   },
   "devDependencies": {
     "standard": "^17.1.0"
-  },
-  "type": "commonjs"
+  }  
 }

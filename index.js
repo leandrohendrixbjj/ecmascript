@@ -1,18 +1,23 @@
 console.clear()
 
-const a = new Promise((resolve) => {
-  setTimeout(resolve,500,'A')
+const http = require('http')
+const fs = require('fs')
+const { Writable, Transform } = require('stream')
+
+
+const server = http.createServer((req,res) => {
+  res.writeHead(200, {'Content-Type': 'text/css'})
+  
+  // fs.createReadStream('./small.file', {
+  //   highWaterMark: 100 * 1024 * 1024
+  // }).pipe(res)
+
+  const strmReadFile = fs.createReadStream('./Stream/big.file', {
+    highWaterMark: 500 * 1024 * 1024
+  }).setEncoding('utf-8')        
+  
+  strmReadFile.pipe(res)
 })
 
-const b = new Promise((resolve,reject) => {
-  setTimeout(reject,200,'B')
-})
-
-const c = new Promise((resolve) => {
-  setTimeout(resolve,300,'C')
-})
-
-
-Promise.race([a,b,c])
-.then(resp => console.log(resp))
-.catch(error => console.log(error))
+//server.setTimeout = 160000
+server.listen(3000, () => console.log('Server is running'))

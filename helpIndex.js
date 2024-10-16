@@ -1,22 +1,12 @@
-
 console.clear()
 
-const arr = [5, 4, 3, 2, 1, 0]
+const strem = require('stream')
 
-const binarySearch = (arr, target) => {
+const myWritableStrem = new strem.Writable({
+  write(chunk, encoding, next){
+    console.log(chunk.toString())
+    next()    
+  }
+})
 
-  let keepSearching = false
-  let mewArr = []
-  let valueOfHalfArr = (arr.length / 2)
-  let positionAtMiddleArr = Math.ceil(valueOfHalfArr) - 1
-  let valueAtMiddleware = arr[positionAtMiddleArr]
-
-  if (valueAtMiddleware == target)
-    return valueAtMiddleware
-
-  return valueAtMiddleware
-}
-
-const data = binarySearch(arr, 0)
-
-console.log('data:', data);
+process.stdin.pipe(myWritableStrem)
