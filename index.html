@@ -3,18 +3,76 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Webstream é o terroooorr</title>
+  <style>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-gap: 20px;
+      align-items: stretch;
+    }
+
+    .grid>article {
+      border: 1px solid #ccc;
+    }
+
+    .grid .text {
+      padding: 20px;
+    }
+
+    .container {
+      padding: 10px;
+    }
+  </style>
 </head>
 
 <body>
-  <p onmousedown="changeColor(this,'red')" onmouseover="changeColor(this,'blue')">Meu nome não é Jonny</p>
-  <button id="btn">Try it</button>
+  <div class="container">
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </div>
+  <div class="container">
+    <main id="cards" class="grid">
+      <!-- <article>
+        <div class="text">
+          <h3>Test 01</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, tenetur?</p>
+          <a href="#"> Here's why</a>
+        </div>
+      </article>
+      <article>
+        <div class="text">
+          <h3>Test 02</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, tenetur?</p>
+          <a href="#"> Here's why</a>
+        </div>
+      </article>
+      <article>
+        <div class="text">
+          <h3>Test 03</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, tenetur?</p>
+          <a href="#"> Here's why</a>
+        </div>
+      </article>
+      <article>
+        <div class="text">
+          <h3>Test 04</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, tenetur?</p>
+          <a href="#"> Here's why</a>
+        </div>
+      </article>
+      <article>
+        <div class="text">
+          <h3>Test 05</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, tenetur?</p>
+          <a href="#"> Here's why</a>
+        </div>
+      </article> -->
+    </main>
+  </div>
+  <script src="./helpIndex.js"></script>
 </body>
 
 </html>
-<script>
-  function changeColor(element, color) {
-    element.style.color = color
-  }
-</script>

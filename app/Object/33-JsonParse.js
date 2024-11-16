@@ -1,6 +1,9 @@
-// JsonParse => Converte uma string em Objeto
 console.clear()
 
-const person = '{"name":"leandro", "age":"30"}'
-const obj = JSON.parse(person)
-console.log(obj.name);
+// JSON.parse => Transforma uma String em Jsona
+
+const data = '{"name":"leandro","age":40,"filters":[1,2,3],"createdAt":"2024-01-01"}'
+
+const jsonData = JSON.parse(data)
+
+console.log(jsonData.name);

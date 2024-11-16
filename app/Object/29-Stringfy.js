@@ -1,4 +1,7 @@
-// O método JSON.stringify() converte valores em javascript para uma String JSON
+/* 
+  O método JSON.stringify() converte valores em JSON para uma String de JSON
+*/
+  
 console.clear()
 
 JSON.stringify({});                  // '{}'

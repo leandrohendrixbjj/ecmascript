@@ -2,7 +2,7 @@
   "name": "nodestudy",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.js",  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx nodemon index.js",
@@ -28,7 +28,9 @@
     "socket.io": "^4.7.1",
     "sqlite3": "5.0.2",
     "knex": "^2.2.0",
-    "mysql2": "^3.11.3"
+    "mysql2": "^3.11.3",
+    "byte-size": "^8.1.0",
+    "csvtojson": "^2.0.10"
   },
   "devDependencies": {
     "standard": "^17.1.0"
