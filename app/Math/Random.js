@@ -1,21 +1,13 @@
 console.clear()
 
 /*
-  Static method returns a floating-point, pseudo-random number that's greater than
-  or equal to 0 and less than 1,
+  Números no intervalor de 1,10
 */
 
 const MIN = 1
-const MAX = 5
-const dontShowZero = 1
+const MAX = 10
+const notShowZero = true
 
-setInterval(() => {
-  console.log(Math.random())
+const data = Math.round(Math.random() * (MIN, MAX) + notShowZero)
 
-  console.log(Math.random() * MAX)
-
-  console.log(
-    Math.round(
-      Math.random() * (MIN, MAX) + dontShowZero)
-  )
-}, 2000)
+console.log(data)

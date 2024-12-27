@@ -1,6 +1,12 @@
 console.clear()
 
-// Static method returns 1 or -1, indicating the sign of the number passed as argument.
+/*
+  Método statico que retorna:
+    Se o argumento é um número positivo, o retorno será 1;
+    Se o numero passado for negativo, o retorno será -1
+    Se o argumento for um zero positivo , o retorno será +0
+    Se o argumento for 0 negativo , o retorno será -0
+*/
 
 console.log(Math.sign(3)) // 1
 

@@ -1,9 +1,14 @@
 console.clear()
 
-// Spreed => Passa vários valores em um só parâmetro
+//  Method is often used in condition inside while loop.
 
-const sum = (...data) => {
-  return data.reduce((a, b) => a + b)
+
+const data = [1,2,3]
+var sum = 1
+
+while (typeof (sum = data.shift()) !== 'undefined') {  
+  sum+=sum
+  console.log(sum)
 }
 
-console.log(sum(1, 2, 3))
+console.log(`Sum: ${sum}`)

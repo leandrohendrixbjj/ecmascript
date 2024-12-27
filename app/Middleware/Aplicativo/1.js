@@ -1,30 +1,30 @@
-// Middlewares de nível do aplicativo a uma instância do objeto app
-// usando as funções app.use()
-// A função é executada sempre que o aplicativo receber uma solicitação.
+console.clear()
+const express = require('express')
+const app = express()
 
-const app = require('express')();
+// Permire Obter os dados da Request tipo POST
+app.use(express.json())
 
+// Middleware de Aplicativo
 app.use((req, res, next) => {
-    console.log('Time', Date.now());
-    next();
-});
+  // Impressão de msg sempre que uma request for efetuada
+  const today = new Date()
+  const timer = `${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`
 
-app.post('/user', (req, res, next) => {
-    console.log('Request Type:', req.method);
-    res.send("User");
-    next();
-});
+  console.log(`UTC Hours ${timer} `)
+  next()
+})
 
 // Ilustra uma sub-pilha de middleware
-app.get('/user/:id', (req, res, next) => {
-    console.log('Request Resource URL', req.originalUrl);
-    res.send('User');
-    next();
+app.get('/user', (req, res, next) => {
+  console.log('Request Resource URL', req.originalUrl)
+  res.send('User')
+  next()
 }, (req, res, next) => {
-    console.log("Request Type", req.method);;
-    next();
-});
+  console.log('Request Type', req.method)
+  next()
+})
 
 app.listen(3000, () => {
-    console.log("Server is running");
+  console.log('Server is running')
 })

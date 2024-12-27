@@ -1,13 +1,10 @@
 console.clear()
 
-// Static method returns the square root of a number
+// Retorna a raiz quadrada de um número
 
-function calcHypotenuse (a, b) {
-  return Math.sqrt(a * a + b * b)
-}
+Math.sqrt(9) // 3
+Math.sqrt(2) // 1.414213562373095
 
-console.log(calcHypotenuse(3, 4)) // 5
-
-console.log(calcHypotenuse(5, 12)) // 13
-
-console.log(calcHypotenuse(0, 0)) // 0
+Math.sqrt(1) // 1
+Math.sqrt(0) // 0
+Math.sqrt(-1) // NaN

@@ -1,8 +1,13 @@
 console.clear()
 
-const name = 'leandro'
-const lastName = ' soares'
+/*
+  O método concat() retorna um novo array contendo todos
+  os arrays ou valores passados como parâmetro.
+*/
 
-const data = name.concat(lastName)
+const suzuki = ['vmax', 'vstrom']
+const triump = ['Tiger', 'Trident']
 
-console.log(data);
+const motos = suzuki.concat(triump)
+
+console.log(motos)
