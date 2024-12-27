@@ -2,7 +2,7 @@ console.clear()
 
 const data = {}
 
-Array.prototype.unshift.call(data, 'Leandro');
-Array.prototype.unshift.call(data, 'Soares');
+Array.prototype.unshift.call(data, 'Leandro')
+Array.prototype.unshift.call(data, 'Soares')
 
-console.log(data);
+console.log(data)
