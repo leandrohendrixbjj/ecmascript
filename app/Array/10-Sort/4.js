@@ -1,17 +1,17 @@
-//Ordena os grupos de valoes de um objeto
 console.clear()
 
-const people = [
-   { name: 'Zilmara', age: 15 },
-   { name: 'Will', age: 20 },
-   { name: 'Fernanda', age: 30 },
-   { name: 'Bruna', age: 40 },
-   { name: 'Ana', age: 60 }
-]
+// Ordena os grupos de valoes de um objeto
 
-function orderBy(a, b, field = 'age') {
-   return (a[field] > b[field]) ? 1 : (a[field] < b[field]) ? -1 : 0
+const key = 'id'
+
+function orderBy (a, b) {
+  return (a[key] > b[key]) ? 1 : (a[key] < b[key]) ? -1 : 0
 }
 
+const data = [
+  { id: 10, name: 'Ana' },
+  { id: 1, name: 'Zilda' },
+  { id: 5, name: 'Bruna' }
+]
 
-console.log(people.sort(orderBy));
+console.log(data.sort(orderBy))

@@ -1,5 +1,9 @@
-var lista = [10,1, 5, 9, 8, 12, 15];
+console.clear()
 
-lista.sort((a, b) => a-b);
+// Com arrow function
 
-console.log(lista);
+const data = [10, 1, 5, 12, 9]
+
+data.sort((a, b) => a - b)
+
+console.log(data)

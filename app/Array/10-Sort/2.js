@@ -1,10 +1,13 @@
-//Os valores não são impressos na ordem correta
-var lista = [10, 1, 5, 9, 8, 12, 15];
+console.clear()
 
-function orderBy(a, b) {
-   return (a > b) ? 1 : (a < b) ? -1 : 0
+// Os valores não são impressos na ordem correta
+
+const data = [10, 1, 12, 5, 9]
+
+function orderBy (a, b) {
+  return (a > b) ? 1 : (a < b) ? -1 : 0
 }
 
-lista.sort(orderBY);
+data.sort(orderBy)
 
-console.log(lista);
+console.log(data)
