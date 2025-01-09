@@ -1,16 +1,8 @@
-console.clear()
+console.clear();
 
-/*
-   IndexOf: consegue validar se parte da string selecionada
-   existe no elemento dentro do array 
-*/
+const a = 'leandro '
+const b = 'soares'
 
-const search = 'le'
-const data = ['leandro','soares', 'leonardo']
+const data = a.concat(b)
 
-for(let row in data){
-   if (data[row].indexOf(search) > -1){
-    console.log(data[row])    
-   }
-}
-
+console.log(data);

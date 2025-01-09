@@ -1,11 +1,12 @@
-console.clear();
+console.clear()
 
-// Parameters
-// Element => Being processed in the array.
-// Index => index of the current element
-// Arr => the array map
+/*
+   Element => Valor dentro do array
+   Index => Index do valor dentro do array
+   Arr => o array com valores
+ */
 
-[12, 13, 14].map((element, index, arr) => {
-  console.log(
-        `Element: ${element} Index: ${index} arr: ${arr}`)
-})
+  [12, 13, 14].map((value, index, arr) => {
+    console.log(
+    `Value: ${value} Index: ${index} arr: ${arr}`)
+  })
