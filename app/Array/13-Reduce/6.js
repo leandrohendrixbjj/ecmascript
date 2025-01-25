@@ -1,7 +1,8 @@
-//Juntando arrays contidos num Objeto
 console.clear()
 
-const data = [
+// Juntando arrays contidos num Objeto
+
+const info = [
   {
     name: 'Leandro',
     books: ['Bible', 'Harry Potter'],
@@ -9,14 +10,15 @@ const data = [
   },
   {
     name: 'Soares',
-    books: ['The Lord of the Rings', 'The Shining'],
+    books: ['The Lord of the Rings', 'The Shining', 'Better Call Saul'],
     age: 50
-  },
+  }
 ]
 
-const books = data.reduce((element, node) => {
-  return [...element, ...node.books]
-}, ['First Book'])
-
-console.log(books);
-
+const data = info.reduce((acculumate, node) => {
+  return [...acculumate, ...node.books]
+},
+[]).sort((a, b) => {
+  return (a > b) ? 1 : (a < b) ? -1 : 0
+})
+console.log(data)

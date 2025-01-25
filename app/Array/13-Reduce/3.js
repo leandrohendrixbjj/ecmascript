@@ -1,14 +1,17 @@
-// Soma de valores de um objeto de um array
-// Quando se usa objetos é importante passar a variavel valor inicial
-console.clear();
+console.clear()
 
-const inicialValue = 0;
-const obj = [
-    { val: 1 }, { val: 2 },
-    { val: 3 }, { val: 4 }
-].reduce((accumulate, actualValue, index, arr) => {
-    return accumulate + actualValue.val;
-}, inicialValue);
+/*
+  Soma de valores de um objeto de um array
+  Quando se usa objetos é importante passar a variavel valor inicial
+*/
 
-console.log(obj);
+const startWith = 0
 
+const data = [
+  { item: 'Laranja', preco: 10 },
+  { item: 'Banana', preco: 5 },
+  { item: 'Abacate', preco: 20 }
+
+].reduce((accumulate, element) => (accumulate += element.preco), startWith)
+
+console.log(data)

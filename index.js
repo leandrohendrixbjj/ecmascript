@@ -1,8 +1,24 @@
-console.clear();
+console.clear()
 
-const a = 'leandro '
-const b = 'soares'
+// Reduce => String, NUmero, []
 
-const data = a.concat(b)
+const info = [
+  {
+    name:'leandro',
+    motos: ['vstrom','xj']
+  },
+  {
+    name:'soares',
+    motos: ['cg','intruder']
+  }
+]
+
+const data = info.reduce((acc,el) => {
+  return [...acc, ...el.motos]
+},[])
 
 console.log(data);
+
+
+
+

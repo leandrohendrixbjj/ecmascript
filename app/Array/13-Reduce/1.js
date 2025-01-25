@@ -1,10 +1,11 @@
-// Retorna um único valor de retorno. Que pode não ser um array
-console.clear();
-const arr = [1, 2, 3];
-const initialValue = 0;
+console.clear()
 
-const sum = arr.reduce((accumulate, value) => {
-    return accumulate + value;
-}, initialValue);
+// Retorna um valor único ou reduz para um array, string, integer..
+const data = [1, 2, 3]
+const lastValueToInteration = 0
 
-console.log(sum);
+const sum = data.reduce((accumulate, value) => {
+  return accumulate + value
+}, lastValueToInteration)
+
+console.log(`Soma: ${sum}`)

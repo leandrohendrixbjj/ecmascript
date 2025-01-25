@@ -1,20 +1,24 @@
-// Acumulador => Inicia com o valorInicial e será retornado na última iteração
-// ValorInicial => Elemento atual que está sendo processado no array
-// Index => index of the current element
-// Arr => the array map
+console.clear()
 
-//Obs: Caso nenhum valorInicial seja fornecido, acumulador será igual ao primeiro valor 
-//no array, e valorAtual será igual ao segundo.
-//O reduce pode retornar um array, string, integer..
+/*
+  Acumulador => Inicia com o valorInicial e será retornado na última iteração
+  Element => Valor dentro do array
+  Index => Index do valor dentro do array
+  Arr => o array com valores
 
-console.clear();
+  ultimoValorDaInteracao: Caso nenhum valor seja fornecido:
+    Acumulador: recebe o primeiro valor do array 
+    Element: recebe o segundo valor do array ( demais segue order do array )  
+    O reduce pode retornar um array, string, integer..
+*/
 
-const arr = [10, 2];
-const valorInicial = 0;
+const arr = [1, 2, 3, 4]
+const ultimoValorDaInteracao = 0
 
-const sum = arr.reduce((acumulador, valorInicial, index, arr) => {
-    console.log(
-        `Acumulador: ${acumulador} vlInicial: ${valorInicial} Index: ${index} arr: ${arr} `);
-}, valorInicial);
+const sum = arr.reduce((acumulador, element, index, arr) => {
+  console.log(
+        `Acumulador: ${acumulador} Element: ${element} 
+         Index: ${index} arr: ${arr} valorInicial: ${valorInicial} \n`)
+}, ultimoValorDaInteracao)
 
-
+console.log(`Sum: ${sum}`)
