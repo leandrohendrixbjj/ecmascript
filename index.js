@@ -1,24 +1,10 @@
 console.clear()
 
-// Reduce => String, NUmero, []
+// Sort, Filter, Map, Reduce, spreed
 
-const info = [
-  {
-    name:'leandro',
-    motos: ['vstrom','xj']
-  },
-  {
-    name:'soares',
-    motos: ['cg','intruder']
-  }
-]
-
-const data = info.reduce((acc,el) => {
-  return [...acc, ...el.motos]
-},[])
-
-console.log(data);
+const [,,data, ...info] = [1,2,3,4,5] 
 
 
+console.log(info)
 
 
