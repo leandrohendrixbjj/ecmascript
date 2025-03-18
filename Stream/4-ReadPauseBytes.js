@@ -1,12 +1,9 @@
 console.clear()
-/*
-  Pause mode: Os dados devem ser lidos conforme usuário
-  digita a tecla Enter
-*/
+// Pause mode: Os dados devem ser lidos conforme usuário
 const fs = require('fs')
 
 // 65536 kb
-const strmReadFile = fs.createReadStream('./Stream/big.file')
+const strmReadFile = fs.createReadStream('./../userBig.csv')
 
 let totalReads = 0
 let totalBytes = 0
@@ -24,8 +21,9 @@ strmReadFile.on('end', chunk =>
 )
 
 // Mantém o node ativo
+console.log('Digite: Enter 2x')
 process.stdin.on('data', line => {
-  if (line === '\r\n') {
+  if (line === '\n') {
     strmReadFile.read()
   }
 })

@@ -1,12 +1,13 @@
-console.clear()
 /*
   Flowing mode: Os dados são lidos sem parada
   Sem o parâmetro: highWaterMark a leitura padrão node de 65536 kb
 */
+
+console.clear()
 const fs = require('fs')
 
 // 100MB
-const strmReadFile = fs.createReadStream('./big.file', {
+const strmReadFile = fs.createReadStream('./../userBig.csv', {
   highWaterMark: 100 * 1024 * 1024
 })
 

@@ -1,7 +1,4 @@
-/*
-  Digite o terminal
-  Impressão padrão utf8
-*/
+// Digite o terminal: Impressão padrão utf8
 
 console.clear()
 
